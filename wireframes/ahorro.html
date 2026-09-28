@@ -16,7 +16,7 @@
   .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
   .risk{display:flex;gap:4px}.risk i{width:22px;height:8px;border-radius:2px;background:var(--fill-3)}.risk i.on{background:var(--ink)}
   .pcard{display:flex;flex-direction:column;gap:14px;padding:28px}
-  .pcard .kpi{display:flex;align-items:baseline;gap:8px;padding:16px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+  .pcard .kpi{display:flex;flex-direction:column;gap:6px;padding:16px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);min-height:122px;justify-content:center}
   .pcard .kpi b{font-size:var(--fs-xxl);line-height:1;white-space:nowrap}
   .pcard ul{list-style:none;font-size:var(--fs-xs);color:var(--ink-2)}
   .pcard li{padding:5px 0}.pcard li::before{content:"✓  ";font-weight:700;color:var(--ink)}
@@ -68,7 +68,7 @@
 
   <!-- HERO CATEGORÍA -->
   <section style="padding:32px 0 64px">
-    <span class="n" style="left:100px;top:20px">1</span>
+    <span class="n" style="left:76px;top:20px">1</span>
     <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
       <div>
         <p class="eyebrow">Productos de ahorro</p>
@@ -97,17 +97,17 @@
   </section>
 
   <nav class="subnav">
-    <span class="n" style="left:100px;top:14px">3</span>
-    <a>Productos</a><a>Comparativa</a><a>Simulador</a><a>Ventaja Pensumo</a><a>Preguntas frecuentes</a>
+    <span class="n" style="left:76px;top:14px">3</span>
+    <a>Productos</a><a>Ventajas</a><a>Comparativa</a><a>Simulador</a><a>Pensumo</a><a>Preguntas frecuentes</a>
     <a class="btn primary sm" style="margin-left:auto">Te llamamos</a>
   </nav>
 
   <!-- PRODUCTOS -->
   <section>
-    <span class="n" style="left:100px;top:60px">4</span>
+    <span class="n" style="left:76px;top:60px">4</span>
     <div class="wrap">
       <div class="sec-head">
-        <div><p class="eyebrow">3 formas de ahorrar</p><h2>Elige según tu forma de ser con el dinero</h2></div>
+        <div><p class="eyebrow">Tres fórmulas para rentabilizar tus ahorros</p><h2>Elige según tu forma de ser con el dinero</h2></div>
         <div>
           <p class="small muted" style="margin-bottom:8px">¿Cómo te sientes con el riesgo?</p>
           <div class="seg"><span class="on">Prefiero seguridad</span><span>Algo de riesgo</span><span>Busco rentabilidad</span></div>
@@ -115,49 +115,64 @@
       </div>
       <div class="grid g3" style="align-items:stretch">
         <article class="card pcard reco">
-          <div class="row" style="justify-content:space-between"><span class="tag">Aportaciones periódicas</span><div class="risk" title="Riesgo bajo"><i class="on"></i><i></i><i></i></div></div>
+          <div class="row" style="justify-content:space-between"><span class="tag">Periódicas y/o únicas</span><div class="risk" title="Riesgo bajo"><i class="on"></i><i></i><i></i></div></div>
           <h3>Seguro de Ahorro Garantizado</h3>
-          <p class="muted">Tu dinero crece mes a mes con un interés asegurado. Tú decides para qué.</p>
-          <div class="kpi"><b>2,20&nbsp;%</b><span class="small muted"><span class="gl" tabindex="0" data-tip="Rentabilidad anual antes de impuestos, asegurada por contrato.">interés bruto anual garantizado</span></span></div>
-          <ul><li>Cobra en capital o en renta mensual creciente</li><li>Cobertura en caso de fallecimiento</li><li>+ <span class="gl" tabindex="0" data-tip="Parte de los beneficios de la mutualidad que se suma a tu ahorro cada año.">participación en beneficios</span></li><li>1,70&nbsp;% para aportaciones únicas</li></ul>
-          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn primary sm">Ver producto</a><a class="link small">Simular</a></div>
+          <p class="muted">El máximo ahorro, siempre disponible y con rentabilidad garantizada. Tú decides para qué.</p>
+          <div class="kpi"><b>2,20&nbsp;%</b><span class="small muted"><span class="gl" tabindex="0" data-tip="Rentabilidad anual antes de impuestos, asegurada por contrato.">interés bruto anual garantizado</span> en aportaciones periódicas</span></div>
+          <ul><li>Tu capital disponible cuando lo decidas</li><li>Cobro único, renta mensual creciente o <span class="gl" tabindex="0" data-tip="Un ingreso mensual de por vida que complementa tu pensión.">renta vitalicia</span></li><li>Aportaciones cuando quieras, hasta tu jubilación</li><li>Tus beneficiarios heredan el ahorro</li></ul>
+          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn primary sm">Ver producto</a><a class="link small">Calcular mi ahorro</a></div>
         </article>
         <article class="card pcard">
-          <div class="row" style="justify-content:space-between"><span class="tag">Aportación única</span><div class="risk" title="Riesgo bajo"><i class="on"></i><i></i><i></i></div></div>
+          <div class="row" style="justify-content:space-between"><span class="tag">Prima única</span><div class="risk" title="Riesgo bajo"><i class="on"></i><i></i><i></i></div></div>
           <h3>Seguro de Ahorro-Inversión</h3>
-          <p class="muted">Para ese dinero que tienes parado y quieres que rinda, sin sorpresas.</p>
-          <div class="kpi"><b>1,70&nbsp;%</b><span class="small muted">garantizado a vencimiento (2030)</span></div>
-          <ul><li>Desde 5.000 € hasta 100.000 €</li><li>Rescate disponible a partir del primer año</li><li>Cobertura en caso de fallecimiento</li><li>Contratación hasta los 65 años</li></ul>
-          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn sm">Ver producto</a><a class="link small">Te llamamos</a></div>
+          <p class="muted">Preserva tus ahorros y suma los beneficios de tu inversión, sin sorpresas.</p>
+          <div class="kpi"><b style="font-size:var(--fs-xl)">Garantizado</b><span class="small muted"><span class="gl" tabindex="0" data-tip="Interés mínimo asegurado por contrato durante toda la vida del seguro.">interés técnico</span> + bonus por permanencia</span></div>
+          <ul><li>Mayor interés si mantienes hasta el vencimiento</li><li>Dispón de tu dinero tras un año, con un 1&nbsp;% garantizado</li><li>Capital garantizado para tus beneficiarios</li><li>Los beneficios tributan solo al cobrarlos</li></ul>
+          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn sm">Ver producto</a><a class="link small">Solicitar información</a></div>
         </article>
         <article class="card pcard">
-          <div class="row" style="justify-content:space-between"><span class="tag">Inversión automatizada</span><div class="risk" title="Riesgo según tu perfil"><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+          <div class="row" style="justify-content:space-between"><span class="tag">Ahorro · Inversión</span><div class="risk" title="Riesgo según tu perfil"><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
           <h3>Plan INbestMe</h3>
-          <p class="muted">Carteras de <span class="gl" tabindex="0" data-tip="Fondos que replican un índice de mercado, con comisiones bajas.">fondos indexados</span> y sostenibles, gestionadas por expertos. 100&nbsp;% online.</p>
-          <div class="kpi"><b>0 €</b><span class="small muted">comisión de gestión en tus primeros 15.000 €</span></div>
-          <ul><li>Cartera adaptada a tu perfil de riesgo</li><li>Aportaciones periódicas flexibles</li><li>Inversión socialmente responsable</li><li>También en productos de inversión</li></ul>
-          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn sm">Ver producto</a><a class="link small">Te llamamos</a></div>
+          <p class="muted">Plan exclusivo para mutualistas que invierte en <span class="gl" tabindex="0" data-tip="Fondos que, además de rentabilidad, cumplen criterios sociales y medioambientales.">fondos socialmente responsables</span>.</p>
+          <div class="kpi"><b style="font-size:var(--fs-xl)">A tu medida</b><span class="small muted">el plan de inversión más personalizado</span></div>
+          <ul><li>Asesoramiento de expertos</li><li>Gestión 100&nbsp;% online, siempre bajo control</li><li>Rentabiliza tu ahorro con impacto positivo</li><li>También en productos de inversión</li></ul>
+          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn sm">Ver producto</a><a class="link small">Solicitar información</a></div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ -->
+  <section style="padding:56px 0">
+    <span class="n" style="left:76px;top:40px">5</span>
+    <div class="wrap">
+      <h3 style="margin-bottom:28px">Por qué un seguro de ahorro de Mutual Médica</h3>
+      <div class="grid g4">
+        <div class="stack"><div class="ico">☾</div><h4>Vive tranquilo</h4><p class="small muted">Siempre tienes el control. Velamos por tu dinero y el de todo el colectivo médico.</p></div>
+        <div class="stack"><div class="ico">%</div><h4>Interés asegurado</h4><p class="small muted">Rentabilidad garantizada sobre el capital que aportas.</p></div>
+        <div class="stack"><div class="ico">↺</div><h4>Capital disponible</h4><p class="small muted">Recupéralo en un único cobro o como renta mensual creciente.</p></div>
+        <div class="stack"><div class="ico">♡</div><h4>Para ti y los tuyos</h4><p class="small muted">Tus beneficiarios heredan el ahorro o la renta que te corresponde.</p></div>
       </div>
     </div>
   </section>
 
   <!-- COMPARATIVA -->
   <section style="background:var(--fill)">
-    <span class="n" style="left:100px;top:60px">5</span>
+    <span class="n" style="left:76px;top:60px">6</span>
     <div class="wrap">
       <div class="sec-head"><div><p class="eyebrow">Comparativa</p><h2>Diferencias, de un vistazo</h2></div><a class="link small">Descargar ficha PDF</a></div>
       <div class="card" style="padding:0;overflow:hidden">
         <table>
           <thead><tr><th></th><th>Ahorro Garantizado</th><th>Ahorro-Inversión</th><th>Plan INbestMe</th></tr></thead>
           <tbody>
-            <tr><th>Ideal si…</th><td>Quieres ahorrar poco a poco para una meta</td><td>Tienes ahorros parados y quieres rentabilidad segura</td><td>Buscas más rentabilidad a largo plazo</td></tr>
-            <tr><th>Cómo aportas</th><td>Mensual, trimestral o anual (y aportaciones extra)</td><td>Una única aportación</td><td>Periódica y flexible</td></tr>
-            <tr><th>Rentabilidad</th><td>2,20&nbsp;% garantizado + participación en beneficios</td><td>1,70&nbsp;% garantizado a vencimiento</td><td>Variable, según mercado</td></tr>
-            <tr><th>Riesgo</th><td><div class="risk"><i class="on"></i><i></i><i></i></div> Bajo</td><td><div class="risk"><i class="on"></i><i></i><i></i></div> Bajo</td><td><div class="risk"><i class="on"></i><i class="on"></i><i class="on"></i></div> Según perfil</td></tr>
-            <tr><th>Disponibilidad</th><td>Rescate a partir del primer año</td><td>Rescate a partir del primer año</td><td>Rescate a partir del primer año</td></tr>
-            <tr><th>Cómo cobras</th><td>Capital o renta</td><td>Capital a vencimiento</td><td>Capital</td></tr>
-            <tr><th>App Pensumo gratis</th><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><th>Ideal si…</th><td>Quieres ahorrar poco a poco para una meta o tu jubilación</td><td>Tienes ahorros parados y quieres rentabilidad segura</td><td>Buscas más rentabilidad a largo plazo y con impacto</td></tr>
+            <tr><th>Cómo aportas</th><td>Aportaciones periódicas y/o únicas, cuando quieras</td><td>Una única aportación (prima única)</td><td>Aportaciones flexibles</td></tr>
+            <tr><th>Rentabilidad</th><td>2,20&nbsp;% garantizado (periódicas) + participación en beneficios</td><td>Interés técnico garantizado + bonificación por permanencia</td><td>Variable, según la evolución de los fondos</td></tr>
+            <tr><th>Riesgo</th><td><div class="risk"><i class="on"></i><i></i><i></i></div> Bajo</td><td><div class="risk"><i class="on"></i><i></i><i></i></div> Bajo</td><td><div class="risk"><i class="on"></i><i class="on"></i><i class="on"></i></div> Según tu perfil</td></tr>
+            <tr><th>Disponibilidad</th><td>Cuando lo decidas</td><td>Tras un año, con un 1&nbsp;% garantizado</td><td>Gestión online en todo momento</td></tr>
+            <tr><th>Cómo cobras</th><td>Capital, renta mensual creciente o renta vitalicia</td><td>Capital al vencimiento</td><td>Capital</td></tr>
+            <tr><th>Si falleces</th><td>Tus beneficiarios heredan el ahorro</td><td>Capital garantizado para tus beneficiarios</td><td>El valor de tu plan</td></tr>
+            <tr><th>App Pensumo gratis</th><td>✓ Incluida</td><td>✓ Incluida</td><td>✓ Incluida</td></tr>
             <tr><th></th><td><a class="btn primary sm">Ver producto</a></td><td><a class="btn sm">Ver producto</a></td><td><a class="btn sm">Ver producto</a></td></tr>
           </tbody>
         </table>
@@ -167,7 +182,7 @@
 
   <!-- SIMULADOR MINI -->
   <section>
-    <span class="n" style="left:100px;top:60px">6</span>
+    <span class="n" style="left:76px;top:60px">7</span>
     <div class="wrap card row" style="padding:40px;gap:48px" data-calc>
       <div style="flex:1.1">
         <p class="eyebrow">Simulador rápido</p>
@@ -187,7 +202,7 @@
 
   <!-- PENSUMO -->
   <section style="padding:0 0 72px;border:0">
-    <span class="n" style="left:100px;top:-10px">7</span>
+    <span class="n" style="left:76px;top:-10px">8</span>
     <div class="wrap card fill row" style="padding:32px 40px;gap:32px">
       <div class="img" style="width:120px;height:120px;flex:none;border-radius:24px"><span>App</span></div>
       <div style="flex:1"><span class="tag dark">Incluido gratis</span><h3 style="margin:10px 0 6px">Con cualquier producto de ahorro, Pensumo es tuyo.</h3><p class="muted">La app que redondea tus compras diarias y transfiere la diferencia a tu ahorro. Sin darte cuenta, sumas cada mes.</p></div>
@@ -197,13 +212,13 @@
 
   <!-- FAQ + AYUDA -->
   <section style="border-top:1px dashed var(--line-2)">
-    <span class="n" style="left:100px;top:60px">8</span>
+    <span class="n" style="left:76px;top:60px">9</span>
     <div class="wrap grid" style="grid-template-columns:1.5fr 1fr;gap:64px">
       <div>
         <p class="eyebrow">Preguntas frecuentes</p>
         <h2 style="margin-bottom:16px">Lo que más nos preguntan</h2>
-        <details open><summary>¿Los seguros de ahorro desgravan en la renta?</summary><p>Las aportaciones no desgravan, pero los rendimientos solo tributan cuando los cobras, como rendimiento del capital mobiliario. Si buscas desgravar, te interesa el Plan de Previsión Asegurado.</p></details>
-        <details><summary>¿Puedo recuperar mi dinero cuando quiera?</summary><p>Sí, a partir del primer año puedes rescatar tu ahorro total o parcialmente.</p></details>
+        <details open><summary>¿Los seguros de ahorro desgravan en la renta?</summary><p>Las aportaciones no desgravan, pero los beneficios solo tributan cuando los cobras, como rendimiento del capital mobiliario. Un asesor te explica la opción más eficiente para tu caso.</p></details>
+        <details><summary>¿Puedo recuperar mi dinero cuando quiera?</summary><p>En el Seguro de Ahorro Garantizado dispones de tu capital cuando lo decidas. En el Seguro de Ahorro-Inversión, a partir del primer año, con un 1&nbsp;% de interés garantizado.</p></details>
         <details><summary>¿Qué es la participación en beneficios?</summary><p>Como mutualidad, no tenemos accionistas: parte de los beneficios se suman cada año a tu ahorro.</p></details>
         <details><summary>¿Qué diferencia hay entre ahorro e inversión?</summary><p>El ahorro te garantiza un interés fijo y sin riesgo. La inversión busca más rentabilidad a largo plazo, pero el valor puede subir o bajar según el mercado.</p></details>
       </div>
@@ -221,21 +236,21 @@
 
   <!-- CROSS SELL -->
   <section>
-    <span class="n" style="left:100px;top:60px">9</span>
+    <span class="n" style="left:76px;top:60px">10</span>
     <div class="wrap">
       <p class="eyebrow">También te puede interesar</p>
       <h2 style="margin-bottom:32px">Completa tu plan</h2>
       <div class="grid g3">
         <div class="card row" style="gap:20px"><div class="ico">↗</div><div style="flex:1"><h4>Inversión</h4><p class="small muted">Para hacer crecer tu patrimonio.</p></div><span>→</span></div>
         <div class="card row" style="gap:20px"><div class="ico">◇</div><div style="flex:1"><h4>Seguro de Orfandad</h4><p class="small muted">Complementa tu ahorro y protege sus estudios.</p></div><span>→</span></div>
-        <div class="card row" style="gap:20px"><div class="ico">☀</div><div style="flex:1"><h4>Preparo mi jubilación</h4><p class="small muted">Todo para tu etapa +55.</p></div><span>→</span></div>
+        <div class="card row" style="gap:20px"><div class="ico">☀</div><div style="flex:1"><h4>Preparo mi jubilación</h4><p class="small muted">Todo para tu etapa de 50 a 65 años.</p></div><span>→</span></div>
       </div>
     </div>
   </section>
 
   <!-- FORM -->
   <section id="contacto" style="background:var(--fill)">
-    <span class="n" style="left:100px;top:60px">10</span>
+    <span class="n" style="left:76px;top:60px">11</span>
     <div class="wrap grid" style="grid-template-columns:1fr 1.1fr;gap:64px;align-items:center">
       <div><p class="eyebrow">Te llamamos</p><h2>¿Te ayudamos a elegir tu ahorro?</h2><p class="lead" style="margin-top:16px">Te llamamos en menos de 24 h. Sin compromiso.</p></div>
       <div class="card" style="padding:32px">
@@ -255,7 +270,7 @@
     <div class="cols">
       <div><div class="logo" style="margin-bottom:16px">LOGO</div><p>Mutual Médica · La mutualidad de los médicos<br>☎ 900 82 88 99</p></div>
       <div><h5>Productos</h5><ul><li>Ahorro</li><li>Inversión</li><li>Protección</li><li>Financiación</li></ul></div>
-      <div><h5>Tu momento</h5><ul><li>Empiezo mi carrera</li><li>Construyo mi vida</li><li>Hago crecer mi patrimonio</li><li>Preparo mi jubilación</li></ul></div>
+      <div><h5>Tu momento</h5><ul><li>30–40 · Impulso mi carrera</li><li>40–50 · Consolido mi patrimonio</li><li>50–65 · Preparo mi jubilación</li></ul></div>
       <div><h5>Herramientas</h5><ul><li>Simuladores</li><li>Recomendador</li><li>Glosario</li><li>Guías</li></ul></div>
       <div><h5>Mutualistas</h5><ul><li>Gestión de prestaciones</li><li>Área mutualista</li><li>¿Te ayudamos?</li></ul></div>
     </div>
@@ -266,16 +281,17 @@
 <aside class="notes-panel" aria-label="Anotaciones UX">
   <h4>Anotaciones · Categoría Ahorro</h4>
   <ol>
-    <li><b>Hero con beneficio claro</b> (garantía, sin riesgo, flexibilidad) y los dos CTA: explorar o pedir llamada.</li>
-    <li><b>Selector por meta.</b> El médico no piensa en "productos", piensa en "para qué". Se traduce su meta al producto recomendado.</li>
+    <li><b>Hero con beneficio claro</b> (garantía, sin riesgo, flexibilidad) y dos CTA: comparar o pedir llamada.</li>
+    <li><b>Selector por meta.</b> El médico no piensa en "productos", piensa en "para qué". Traducimos su meta al producto recomendado.</li>
     <li><b>Sub-navegación sticky</b> con anclas y CTA siempre visible: navegación ágil en una página larga.</li>
-    <li><b>Tarjetas comparables</b> con la misma estructura: tipo de aportación, indicador de riesgo, KPI principal y 4 beneficios. El filtro de riesgo destaca la recomendada.</li>
-    <li><b>Glosario contextual</b> (subrayado punteado): explica términos como "interés bruto" o "fondos indexados" sin salir de la página.</li>
-    <li><b>Tabla comparativa</b> en lenguaje llano. Resuelve la duda "¿cuál es para mí?", que es la mayor barrera en productos financieros.</li>
-    <li><b>Simulador rápido</b> como microconversión que lleva a la ficha de producto.</li>
-    <li><b>Pensumo</b> explicado con un ejemplo cotidiano: el beneficio se entiende en 2 segundos.</li>
-    <li><b>FAQ + ayuda humana:</b> objeciones resueltas y salida a asesor o teléfono.</li>
-    <li><b>Venta cruzada</b> lógica (Orfandad complementa el ahorro, como indica el producto actual) y <b>formulario preconfigurado</b> con la categoría, para un lead más cualificado.</li>
+    <li><b>Los 3 productos de ahorro del brief</b>, con la información del portal de jubilación actual, en tarjetas con la misma estructura: tipo de aportación, riesgo, dato clave y 4 beneficios. El filtro de riesgo destaca el recomendado. INbestMe aparece también en Inversión.</li>
+    <li><b>Ventajas comunes</b> de los seguros de ahorro, recuperadas del portal actual y reescritas en lenguaje más cercano.</li>
+    <li><b>Comparativa en lenguaje llano</b> con glosario contextual (subrayado punteado): responde a "¿cuál es para mí?", la gran barrera en productos financieros.</li>
+    <li><b>Simulador rápido</b> al 2,20&nbsp;% como microconversión que lleva a la ficha de producto.</li>
+    <li><b>Pensumo</b>, solo informativo, con un ejemplo cotidiano: el beneficio se entiende en 2 segundos.</li>
+    <li><b>FAQ + ayuda humana:</b> objeciones resueltas y salida directa a asesor o teléfono.</li>
+    <li><b>Venta cruzada</b> lógica: Orfandad complementa el ahorro, e inversión y jubilación dan continuidad.</li>
+    <li><b>Formulario preconfigurado</b> con la categoría: lead más cualificado para la contratación telefónica.</li>
   </ol>
 </aside>
 

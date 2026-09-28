@@ -59,8 +59,8 @@ a{color:inherit;text-decoration:none}
 .toc p{font-size:1.05cqw;color:var(--ink-3);line-height:1.45}
 
 /* estrategia */
-.cols2{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw;margin-top:2.6cqw;flex:1;min-height:0}
-.box{border:1px solid var(--line);border-radius:1.4cqw;padding:2cqw 2.2cqw}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:2cqw;margin-top:2cqw;margin-bottom:3.2cqw;flex:1;min-height:0}
+.box{border:1px solid var(--line);border-radius:1.4cqw;padding:1.7cqw 2cqw}
 .box.sky{background:var(--sky);border-color:var(--sky)}
 .box.navy{background:var(--navy);border-color:var(--navy);color:#fff}
 .box.navy h3,.box.navy h4{color:#fff}
@@ -76,11 +76,11 @@ a{color:inherit;text-decoration:none}
 .persona .av{width:4.2cqw;height:4.2cqw;border-radius:50%;background-size:cover;background-position:center;flex:none}
 .persona b{font-family:var(--head);color:var(--navy);font-size:1.3cqw;display:block}
 .persona span{font-size:1cqw;color:var(--accent);font-weight:600}
-.vp{font-family:var(--head);font-weight:700;font-size:1.9cqw;line-height:1.3;color:#fff;letter-spacing:-.01em}
+.box .vp{font-family:var(--head);font-weight:700;font-size:1.75cqw;line-height:1.3;color:#fff;letter-spacing:-.01em}
 .vp em{font-style:normal;color:#7FBCE4}
 .princ{display:grid;grid-template-columns:repeat(5,1fr);gap:1cqw;margin-top:1.6cqw}
 .princ div{background:rgba(255,255,255,.08);border-radius:1cqw;padding:1.2cqw}
-.princ b{display:block;font-family:var(--head);font-size:1.8cqw;color:#7FBCE4;line-height:1;margin-bottom:.6cqw}
+.princ b{display:block;font-family:var(--head);font-size:1.5cqw;color:#7FBCE4;line-height:1;margin-bottom:.6cqw}
 .princ p{font-size:1cqw!important;line-height:1.4!important}
 
 /* arquitectura */
@@ -103,7 +103,7 @@ a{color:inherit;text-decoration:none}
 .funnel p{font-size:.92cqw;color:var(--ink-2);padding-left:1.2cqw;line-height:1.35;margin-top:.3cqw}
 
 /* fases */
-.phases{display:grid;grid-template-columns:repeat(6,1fr);gap:.9cqw;margin-top:1.8cqw;margin-bottom:2.4cqw;flex:1;min-height:0}
+.phases{display:grid;grid-template-columns:repeat(6,1fr);gap:.9cqw;margin-top:1.4cqw;margin-bottom:2.4cqw;flex:1;min-height:0}
 .ph{border-radius:1.2cqw;padding:1.2cqw 1.15cqw;background:var(--sky);display:flex;flex-direction:column;gap:.7cqw;position:relative}
 .ph .num{font-family:var(--head);font-weight:800;font-size:2cqw;color:var(--accent);line-height:1}
 .ph h4{font-size:1.3cqw;line-height:1.15}
@@ -185,7 +185,7 @@ a{color:inherit;text-decoration:none}
       <h1>Del portal del jubilado al <em>Futuro del Médico</em>.</h1>
       <p>Nueva propuesta de valor, experiencia y diseño para captar y capacitar a médicos de 30 a 65 años, con foco en la conversión.</p>
       <div class="meta">
-        <div><b>Caso práctico</b>Senior UX/UI · Product Builder</div>
+        <div><b>Caso práctico</b>User Experience · Product Builder</div>
         <div><b>Jenifer Jaldo</b>UX/UI Designer</div>
         <div><b>Septiembre 2026</b>Versión desktop</div>
       </div>
@@ -215,38 +215,36 @@ a{color:inherit;text-decoration:none}
       <p class="kicker">00 · Estrategia</p>
       <h2>Un portal para toda la carrera, no solo para el final.</h2>
       <div class="cols2">
-        <div style="display:grid;gap:1.6cqw;align-content:start">
+        <div style="display:grid;gap:1.4cqw;grid-template-rows:auto 1fr">
           <div class="box">
             <h3>El punto de partida</h3>
             <div class="vs">
               <ul>
-                <li>Nombre y mensajes centrados en la jubilación: el médico de 30 años no se siente interpelado.</li>
-                <li>Portal estático e informativo, organizado por producto.</li>
+                <li>Portal muy estático e informativo, organizado por producto.</li>
+                <li>Mensajes y look&amp;feel pensados para un target sénior: el médico de 30 años no se siente interpelado.</li>
               </ul>
               <ul>
-                <li>Pocas herramientas de implicación y CTAs genéricos.</li>
-                <li>Lenguaje financiero para un público que no es experto.</li>
+                <li>Poco enfocado a conversión y captación: CTAs genéricos y pocas herramientas.</li>
+                <li>Lenguaje financiero para médicos que no son expertos.</li>
               </ul>
             </div>
           </div>
           <div class="box sky">
             <h3>A quién hablamos</h3>
             <div class="vs">
-              <div class="persona"><span class="av" style="background-image:url(assets/foto-jovenes.jpg);background-position:47% 22%;background-size:320%"></span><div><b>Laura, 32 · Adjunta</b><span>30–45 años</span><p style="margin-top:.4cqw">Empieza a ganar estabilidad. Quiere ahorrar, financiar proyectos y proteger a su familia. Poco tiempo y cero tecnicismos.</p></div></div>
-              <div class="persona"><span class="av" style="background-image:url(assets/foto-senior.jpg);background-position:74% 18%;background-size:320%"></span><div><b>Carmen, 58 · Médica de familia</b><span>+50 años</span><p style="margin-top:.4cqw">Quiere maximizar su ahorro para la jubilación, protegerse y cuidar de los suyos. Busca confianza y hablar con alguien.</p></div></div>
+              <div class="persona"><span class="av" style="background-image:url(assets/foto-jovenes.jpg);background-position:47% 22%;background-size:320%"></span><div><b>Laura, 34 · Pediatra</b><span>30–40 años</span><p style="margin-top:.4cqw">Necesita financiación, empezar a ahorrar e invertir y proteger a su familia. Poco tiempo, cero tecnicismos.</p></div></div>
+              <div class="persona"><span class="av" style="background-image:url(assets/foto-senior.jpg);background-position:74% 18%;background-size:320%"></span><div><b>Carmen, 58 · Médica</b><span>50–65 años</span><p style="margin-top:.4cqw">Quiere maximizar sus ahorros para la jubilación y proteger a su familia. Busca confianza y hablar con alguien.</p></div></div>
             </div>
           </div>
         </div>
         <div class="box navy" style="display:flex;flex-direction:column">
           <p class="kicker" style="color:#7FBCE4">Propuesta de valor</p>
-          <p class="vp">"Futuro del Médico" acompaña a cada médico en <em>cada etapa de su carrera</em> para que tome decisiones sobre su dinero con la misma tranquilidad con la que cuida de sus pacientes.</p>
+          <p class="vp">"Futuro del Médico" acompaña a cada médico en <em>cada momento de su vida</em> para que cuide de sus finanzas, y de las de su familia, con la misma tranquilidad con la que cuida de sus pacientes.</p>
           <p style="margin-top:1.4cqw">Evolución de "Portal de jubilación del médico" a una marca paraguas que habla a los 30 y a los 60, bajo el respaldo de Mutual Médica.</p>
-          <div class="princ" style="margin-top:auto">
-            <div><b>1</b><p>Por momento vital, no por producto</p></div>
-            <div><b>2</b><p>Claridad antes que tecnicismo</p></div>
-            <div><b>3</b><p>Herramientas que implican</p></div>
-            <div><b>4</b><p>Conversión con contexto</p></div>
-            <div><b>5</b><p>Siempre a un clic de una persona</p></div>
+          <div class="princ" style="margin-top:auto;grid-template-columns:repeat(3,1fr)">
+            <div><b>Captar</b><p>Nueva marca que habla a los 30 y a los 60, navegación por momento vital y contenidos que atraen tráfico.</p></div>
+            <div><b>Capacitar</b><p>Lenguaje claro, glosario contextual, guías breves y un recomendador en 3 preguntas.</p></div>
+            <div><b>Convertir</b><p>Simulador al 2,20&nbsp;%, "Te llamamos" siempre visible y formulario con contexto para la venta telefónica.</p></div>
           </div>
         </div>
       </div>
@@ -262,8 +260,8 @@ a{color:inherit;text-decoration:none}
       <p class="sub">Doble entrada: por necesidad (producto) o por momento vital. Las herramientas llevan al usuario del interés a la llamada.</p>
       <div class="tree">
         <div class="root">Futuro del Médico · Home</div>
-        <div class="node"><h4>Productos</h4><ul><li>Ahorro</li><li>Inversión</li><li>Protección</li><li>Financiación</li><li class="muted">→ 10 fichas de producto</li></ul></div>
-        <div class="node"><h4>Tu momento</h4><ul><li>Empiezo mi carrera</li><li>Construyo mi vida</li><li>Hago crecer mi patrimonio</li><li>Preparo mi jubilación</li></ul></div>
+        <div class="node"><h4>Productos</h4><ul><li>Ahorro (3)</li><li>Inversión (2)</li><li>Protección (3)</li><li>Financiación (2)</li><li>→ 8 fichas de producto</li></ul></div>
+        <div class="node"><h4>Tu momento</h4><ul><li>30–40 · Impulso mi carrera</li><li>40–50 · Consolido mi patrimonio</li><li>50–65 · Preparo mi jubilación</li></ul></div>
         <div class="node"><h4>Simuladores</h4><ul><li>Simulador de ahorro</li><li>Simulador de jubilación</li><li>Recomendador</li></ul></div>
         <div class="node"><h4>Aprende</h4><ul><li>Guías</li><li>Vídeos</li><li>Glosario A–Z</li></ul></div>
         <div class="node keep"><h4>Gestión de prestaciones</h4><ul><li>Se mantiene</li></ul></div>
@@ -285,6 +283,7 @@ a{color:inherit;text-decoration:none}
     <div class="s">
       <p class="kicker">01 · Fases del proyecto</p>
       <h2>Seis fases, del research al desarrollo</h2>
+      <p class="sub" style="margin-top:.5cqw">Planteamiento a máximos. Cada fase puede comprimirse en un enfoque MVP según plazos y presupuesto.</p>
       <div class="phases">
         <div class="ph"><span class="num">01</span><h4>Discovery y research</h4><span class="wk">Sem. 1–4</span>
           <ul><li>Kick-off con negocio, marketing, call center y legal</li><li>Auditoría de analítica, embudo y formularios</li><li>Evaluación heurística y de accesibilidad</li><li>Benchmark: aseguradoras, neobancos, roboadvisors</li><li>Entrevistas a médicos de ambos segmentos y encuesta</li><li>Dudas reales del call center</li></ul>
@@ -301,7 +300,7 @@ a{color:inherit;text-decoration:none}
         <div class="ph"><span class="num">05</span><h4>Desarrollo y QA</h4><span class="wk">Sem. 13–20</span>
           <ul><li>Sprints de 2 semanas con diseño en el equipo</li><li>Componentes en el CMS actual (Liferay)</li><li>Leads integrados con CRM y call center</li><li>Etiquetado de eventos (GA4) y SEO</li><li>QA funcional, accesibilidad, rendimiento y RGPD</li></ul>
           <p class="out"><span>Entregable</span>Portal en producción</p></div>
-        <div class="ph"><span class="num">06</span><h4>Lanzamiento y optimización</h4><span class="wk">Sem. 20+</span>
+        <div class="ph"><span class="num">06</span><h4>Lanzamiento y optimización</h4><span class="wk">Sem. 21+</span>
           <ul><li>Lanzamiento progresivo y monitorización</li><li>Dashboard de conversión por etapa</li><li>A/B tests: hero, CTAs y formularios</li><li>Heatmaps y feedback del call center</li><li>Evolutivos: área personal, contratación online</li></ul>
           <p class="out"><span>Entregable</span>Mejora continua (CRO)</p></div>
       </div>
@@ -348,9 +347,9 @@ a{color:inherit;text-decoration:none}
           <h3>KPIs de éxito</h3>
           <div class="kpis">
             <div><b>↑ Leads</b>Tasa de conversión a solicitud de llamada</div>
-            <div><b>↑ Cualificación</b>% de leads con producto y simulación</div>
-            <div><b>↑ 30–45 años</b>Peso del nuevo target en el tráfico y en los leads</div>
-            <div><b>↑ Contratación</b>Ratio lead → póliza firmada</div>
+            <div><b>↑ Contratación</b>Ratio lead → póliza firmada por teléfono</div>
+            <div><b>↑ 30–40 años</b>Peso del nuevo target en el tráfico y en los leads</div>
+            <div><b>↑ Capacitación</b>Uso del simulador, el recomendador y el glosario</div>
           </div>
         </div>
       </div>
@@ -382,8 +381,8 @@ a{color:inherit;text-decoration:none}
       <div class="ui-slide">
         <div class="decisions">
           <div><i>1</i><div><b>Azul de marca como acento único</b><p>El azul exacto del logo para acciones y datos clave; el navy aporta solidez. Contraste AA.</p><div class="swatches"><span style="--c:#0F79BB">#0F79BB</span><span style="--c:#003A63">#003A63</span><span style="--c:#F0F6FC">#F0F6FC</span><span style="--c:#0E2233">#0E2233</span></div></div></div>
-          <div><i>2</i><div><b>Tipografía con más carácter</b><p>Manrope en titulares para un tono actual y cercano. Open Sans, la de la marca, en los textos.</p></div></div>
-          <div><i>3</i><div><b>Tendencias con propósito</b><p>Bento grid, tarjetas flotantes, esquinas amplias y microinteracciones que invitan a explorar.</p></div></div>
+          <div><i>2</i><div><b>Tipografía con más carácter</b><p>Manrope en titulares para un tono actual y cercano. Open Sans, la tipografía actual de la marca, en los textos.</p></div></div>
+          <div><i>3</i><div><b>Tendencias con propósito</b><p>Bento grid, tarjetas flotantes, esquinas amplias, microinteracciones y glosario contextual que ayuda sin interrumpir.</p></div></div>
           <div><i>4</i><div><b>Personas reales y datos tangibles</b><p>Fotografía de médicos jóvenes y cifras concretas (45.147&nbsp;€) en lugar de mensajes abstractos.</p></div></div>
           <a class="cta" href="ui/home.html">Ver la home interactiva →</a>
         </div>

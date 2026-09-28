@@ -129,8 +129,8 @@ section.block{padding:112px 0}
 
 /* ── Momento vital ── */
 .tabs{display:flex;gap:8px;background:var(--sky);padding:6px;border-radius:999px;width:max-content;margin-bottom:32px}
-.tabs button{border:0;background:transparent;height:52px;padding:0 24px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--ink-2);display:flex;flex-direction:column;justify-content:center;line-height:1.2;text-align:left;transition:background .2s,color .2s}
-.tabs button small{font-weight:500;font-size:12.5px;color:var(--ink-3)}
+.tabs button{border:0;background:transparent;height:56px;padding:0 24px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--ink-2);display:flex;flex-direction:column;justify-content:center;line-height:1.2;text-align:left;transition:background .2s,color .2s}
+.tabs button small{font-weight:500;font-size:14px;color:var(--ink-3)}
 .tabs button[aria-selected="true"]{background:#fff;color:var(--navy);box-shadow:0 6px 18px -8px rgba(0,58,99,.35)}
 .tabs button[aria-selected="true"] small{color:var(--accent)}
 .panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;animation:fade .4s ease}
@@ -138,15 +138,16 @@ section.block{padding:112px 0}
 [hidden]{display:none!important}
 .panel .story{position:relative;border-radius:var(--r-l);overflow:hidden;min-height:440px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:40px}
 .panel .story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.panel .story::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,58,99,0) 30%,rgba(0,40,70,.92) 100%);z-index:1}
-.panel .story>*{position:relative;z-index:2}
+.panel .story::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,40,70,0) 20%,rgba(0,40,70,.7) 52%,rgba(0,34,60,.96) 100%);z-index:1}
+.panel .story h3,.panel .story p{text-shadow:0 1px 12px rgba(0,20,40,.45)}
+.panel .story>*:not(img){position:relative;z-index:2}
 .panel .story h3{color:#fff;margin-bottom:10px}
 .panel .story p{color:#DCE9F4;max-width:420px}
 .prods{display:grid;gap:14px;align-content:start}
 .prod{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:18px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:border-color .2s,box-shadow .2s,transform .2s}
 .prod:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-2px)}
 .prod .ic{width:52px;height:52px;border-radius:14px;background:var(--sky);color:var(--accent);display:grid;place-items:center}
-.prod .kind{font-size:12.5px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.prod .kind{font-size:14px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
 .prod h4{font-size:var(--fs-3);margin:2px 0}
 .prod p{font-size:var(--fs-1);color:var(--ink-3)}
 .prod .go{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--navy);transition:background .2s,color .2s}
@@ -161,7 +162,7 @@ section.block{padding:112px 0}
 .cat .ic{width:56px;height:56px;border-radius:16px;background:var(--sky);color:var(--accent);display:grid;place-items:center}
 .cat .ic .ico{width:26px;height:26px}
 .cat ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
-.cat li{font-size:13.5px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--sky);color:var(--navy)}
+.cat li{font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--sky);color:var(--navy)}
 .cat.big{grid-row:span 2;background:var(--navy);color:#fff;position:relative;overflow:hidden}
 .cat.big h3,.cat.big h2{color:#fff}
 .cat.big p{color:#C9DCEC}
@@ -206,7 +207,7 @@ section.block{padding:112px 0}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--accent) var(--p,50%),var(--sky-2) var(--p,50%));cursor:pointer}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 4px 12px rgba(0,58,99,.25)}
 input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid var(--accent)}
-.rng{display:flex;justify-content:space-between;font-size:13.5px;color:var(--ink-3);margin-top:8px}
+.rng{display:flex;justify-content:space-between;font-size:14px;color:var(--ink-3);margin-top:8px}
 .rate-pill{display:inline-flex;align-items:center;gap:10px;margin-top:36px;padding:12px 18px;border-radius:999px;background:var(--sky);font-size:var(--fs-1);color:var(--ink-2)}
 .rate-pill b{color:var(--accent);font-size:var(--fs-2)}
 .out .total{font-family:var(--head);font-size:clamp(48px,5vw,76px);font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1;margin:8px 0 28px}
@@ -218,7 +219,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 .split b{font-family:var(--head);font-size:var(--fs-3);color:var(--navy)}
 .meter{height:12px;border-radius:6px;background:var(--navy);overflow:hidden;display:flex;justify-content:flex-end}
 .meter i{display:block;height:100%;background:var(--accent);transition:width .3s}
-.out .note{font-size:13.5px;color:var(--ink-3);margin:18px 0 28px}
+.out .note{font-size:14px;color:var(--ink-3);margin:18px 0 28px}
 .out .btn{margin-top:auto;align-self:flex-start}
 
 /* ── Pensumo ── */
@@ -228,7 +229,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 .phone b{font-family:var(--head);color:var(--navy);font-size:18px}
 .phone i{display:block;height:7px;border-radius:4px;background:var(--sky-2)}
 .phone i.a{background:var(--accent);width:70%}
-.gift{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--accent);background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:999px;margin-bottom:12px}
+.gift{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--accent);background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:999px;margin-bottom:12px}
 .gift .ico{width:16px;height:16px}
 .eg{display:grid;gap:10px;font-size:var(--fs-1)}
 .eg div{display:flex;justify-content:space-between;gap:24px;padding:12px 16px;background:#fff;border-radius:12px;border:1px solid var(--line)}
@@ -243,7 +244,7 @@ input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;bac
 .guide .cover::after{content:"";position:absolute;right:-40px;bottom:-40px;width:160px;height:160px;border-radius:50%;background:rgba(15,121,187,.1)}
 .guide:nth-child(2) .cover{background:var(--navy);color:#fff}
 .guide:nth-child(2) .cover::after{background:rgba(255,255,255,.08)}
-.guide .meta{font-size:13.5px;font-weight:600;color:var(--accent)}
+.guide .meta{font-size:14px;font-weight:600;color:var(--accent)}
 .guide h4{font-size:var(--fs-3)}
 
 /* ── Por qué + testimonios ── */
@@ -298,6 +299,12 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
 .fab a{display:flex;align-items:center;gap:10px;height:56px;padding:0 22px;border-radius:999px;font-weight:600;box-shadow:0 14px 30px -10px rgba(0,58,99,.5)}
 .fab .f1{background:var(--accent);color:#fff}
 .fab .f2{background:#fff;color:var(--navy);width:56px;padding:0;justify-content:center}
+
+/* Glosario contextual */
+.tip{position:relative;display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1.5px solid currentColor;background:none;font-size:12px;font-weight:700;line-height:1;cursor:help;vertical-align:1px;margin-left:4px;color:inherit;opacity:.8}
+.tip:hover,.tip:focus-visible{opacity:1}
+.tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%) translateY(4px);width:260px;padding:12px 14px;border-radius:12px;background:var(--ink);color:#fff;font-family:var(--body);font-size:14px;font-weight:400;line-height:1.45;text-align:left;box-shadow:0 12px 30px -10px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:30}
+.tip:hover::after,.tip:focus::after{opacity:1;transform:translateX(-50%)}
 
 /* Responsive básico */
 @media (max-width:1100px){
@@ -421,53 +428,42 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
     <div class="wrap">
       <div class="head">
         <div><p class="eyebrow">Tu momento</p><h2>¿En qué punto de tu carrera estás?</h2></div>
-        <p>Elige tu etapa y te mostramos solo lo que tiene sentido para ti ahora.</p>
+        <p>Elige tu etapa y te mostramos solo los productos que tienen sentido para ti ahora.</p>
       </div>
       <div data-tabs>
         <div class="tabs" role="tablist" aria-label="Etapas">
-          <button role="tab" aria-selected="true" aria-controls="p1" id="b1"><small>MIR y primeros años</small>Empiezo mi carrera</button>
-          <button role="tab" aria-selected="false" aria-controls="p2" id="b2"><small>30 – 45 años</small>Construyo mi vida</button>
-          <button role="tab" aria-selected="false" aria-controls="p3" id="b3"><small>45 – 55 años</small>Hago crecer mi patrimonio</button>
-          <button role="tab" aria-selected="false" aria-controls="p4" id="b4"><small>+55 años</small>Preparo mi jubilación</button>
+          <button role="tab" aria-selected="true" aria-controls="p1" id="b1"><small>30 – 40 años</small>Impulso mi carrera</button>
+          <button role="tab" aria-selected="false" aria-controls="p2" id="b2"><small>40 – 50 años</small>Consolido mi patrimonio</button>
+          <button role="tab" aria-selected="false" aria-controls="p3" id="b3"><small>50 – 65 años</small>Preparo mi jubilación</button>
         </div>
 
         <div class="panel" id="p1" role="tabpanel" aria-labelledby="b1">
-          <div class="story"><img src="../assets/foto-guardia.jpg" alt="Dos residentes charlando en la sala de descanso del hospital"><h3>Tu carrera arranca. Tu futuro, también.</h3><p>Financia tu formación y empieza a ahorrar con poco. Cuanto antes empieces, menos esfuerzo te costará.</p></div>
+          <div class="story"><img src="../assets/foto-guardia.jpg" alt="Dos médicos jóvenes charlando en la sala de descanso del hospital"><h3>Tu carrera despega. Tu futuro, también.</h3><p>Financia tu formación, empieza a ahorrar sin riesgo y protege a los tuyos. Cuanto antes empieces, menos esfuerzo te costará.</p><a class="link" href="#" style="color:#fff;margin-top:18px">Ver todo para esta etapa <svg class="ico"><use href="#i-arrow"/></svg></a></div>
           <div class="prods">
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-wallet"/></svg></span><div><span class="kind">Financiación</span><h4>Préstamo MIR</h4><p>Para tu residencia, traslado o preparación.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span><div><span class="kind">Ahorro</span><h4>Seguro de Ahorro Garantizado</h4><p>Empieza con lo que puedas, al 2,20&nbsp;% garantizado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Plan INbestMe</h4><p>Inversión automatizada y sostenible, 100&nbsp;% online.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-wallet"/></svg></span><div><span class="kind">Financiación</span><h4>Préstamo MIR</h4><p>Para tu formación y tus primeros pasos como especialista.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span><div><span class="kind">Ahorro</span><h4>Seguro de Ahorro Garantizado</h4><p>Ahorra para tus metas al 2,20&nbsp;% garantizado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Plan INbestMe</h4><p>Inversión personalizada en fondos socialmente responsables.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-heart"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Orfandad</h4><p>El futuro y los estudios de tus hijos, asegurados.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
           </div>
         </div>
 
         <div class="panel" id="p2" role="tabpanel" aria-labelledby="b2" hidden>
-          <div class="story"><img src="../assets/foto-familia.jpg" alt="Pareja paseando con niños jugando al fondo"><h3>Casa, familia, proyectos.</h3><p>Protege a los tuyos y haz realidad tus planes, sin renunciar a ahorrar para mañana.</p></div>
+          <div class="story"><img src="../assets/foto-familia.jpg" alt="Pareja paseando con niños jugando al fondo"><h3>Casa, familia, proyectos.</h3><p>Haz crecer lo que ya has ahorrado, cumple tus planes y cuida de tu familia.</p><a class="link" href="#" style="color:#fff;margin-top:18px">Ver todo para esta etapa <svg class="ico"><use href="#i-arrow"/></svg></a></div>
           <div class="prods">
             <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-wallet"/></svg></span><div><span class="kind">Financiación</span><h4>Préstamo Ilusiona</h4><p>Para tus proyectos personales.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-heart"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Orfandad</h4><p>El futuro y los estudios de tus hijos, asegurados.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Seguro de Ahorro-Inversión</h4><p>Rentabiliza tus ahorros con interés garantizado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Ahorro · Inversión</span><h4>Plan INbestMe</h4><p>Carteras adaptadas a tu perfil de riesgo.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
             <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><span class="kind">Protección</span><h4>Seguro Multi-Vida</h4><p>Tranquilidad para ti y tu familia.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
           </div>
         </div>
 
         <div class="panel" id="p3" role="tabpanel" aria-labelledby="b3" hidden>
-          <div class="story"><img src="../assets/foto-equipo.jpg" alt="Equipo sanitario caminando por el hospital"><h3>Que tu dinero trabaje para ti.</h3><p>Rentabiliza tus ahorros con el nivel de riesgo que elijas y piensa ya en tu protección.</p></div>
+          <div class="story"><img src="../assets/foto-senior.jpg" alt="Médica revisando documentos en una tablet"><h3>Jubílate con el nivel de vida que quieres.</h3><p>Maximiza tus ahorros, elige cómo cobrarlos y protege tu autonomía y la de tu familia.</p><a class="link" href="#" style="color:#fff;margin-top:18px">Ver todo para esta etapa <svg class="ico"><use href="#i-arrow"/></svg></a></div>
           <div class="prods">
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Seguro de Ahorro-Inversión</h4><p>Aportación única con rentabilidad garantizada.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Plan INbestMe</h4><p>Carteras indexadas adaptadas a tu perfil.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Dependencia</h4><p>Por si un día necesitas ayuda.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
-          </div>
-        </div>
-
-        <div class="panel" id="p4" role="tabpanel" aria-labelledby="b4" hidden>
-          <div class="story"><img src="../assets/foto-senior.jpg" alt="Médica revisando documentos en una tablet"><h3>Jubílate con el nivel de vida que quieres.</h3><p>Maximiza tus ahorros, elige cómo cobrarlos y protege tu autonomía y la de tu familia.</p></div>
-          <div class="prods">
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span><div><span class="kind">Ahorro</span><h4>Seguro de Ahorro Garantizado</h4><p>Cobra en capital o en renta mensual creciente.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Seguro de Ahorro-Inversión</h4><p>Sin riesgo de mercado, 1,70&nbsp;% garantizado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span><div><span class="kind">Ahorro</span><h4>Seguro de Ahorro Garantizado</h4><p>Conviértelo en una renta que complemente tu pensión.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Seguro de Ahorro-Inversión</h4><p>Prima única, sin riesgo de mercado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
             <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Dependencia</h4><p>Tu autonomía, protegida.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
-            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-heart"/></svg></span><div><span class="kind">Protección</span><h4>Seguro Multi-Vida</h4><p>Para que a los tuyos no les falte de nada.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
           </div>
         </div>
       </div>
@@ -486,7 +482,7 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
           <span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span>
           <h3>Ahorro</h3>
           <p>Guarda para tus metas con un interés asegurado, sin riesgo y con total flexibilidad.</p>
-          <div class="rate">2,20&nbsp;%<small>interés bruto anual garantizado</small></div>
+          <div class="rate">2,20&nbsp;%<small>interés bruto anual garantizado<button class="tip" type="button" aria-label="Qué significa bruto anual garantizado" data-tip="Bruto: antes de impuestos. Garantizado: asegurado por contrato, pase lo que pase en los mercados.">?</button></small></div>
           <ul><li>Ahorro Garantizado</li><li>Ahorro-Inversión</li><li>Plan INbestMe</li></ul>
           <span class="link">Ver productos de ahorro <svg class="ico"><use href="#i-arrow"/></svg></span>
         </a>
@@ -545,14 +541,14 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
             <input id="y" type="range" name="years" min="1" max="40" value="20">
             <div class="rng"><span>1 año</span><span>40 años</span></div>
           </div>
-          <div class="rate-pill"><svg class="ico" style="width:18px;color:var(--accent)"><use href="#i-percent"/></svg>Interés técnico garantizado <b>2,20&nbsp;%</b> bruto anual</div>
+          <div class="rate-pill"><svg class="ico" style="width:18px;color:var(--accent)"><use href="#i-percent"/></svg>Interés técnico garantizado <b>2,20&nbsp;%</b> bruto anual<button class="tip" type="button" aria-label="Qué es el interés técnico garantizado" data-tip="Es la rentabilidad mínima que el seguro te asegura por contrato cada año, antes de impuestos. No depende de los mercados.">?</button></div>
         </div>
         <div class="out">
           <span class="muted">Capital final estimado</span>
           <div class="total" data-out="total"></div>
           <div class="split">
             <div><span>Lo que aportas</span><b data-out="paid"></b></div>
-            <div><span>Intereses generados</span><b data-out="interest"></b></div>
+            <div><span>Intereses generados<button class="tip" type="button" aria-label="Qué son los intereses generados" data-tip="Lo que gana tu dinero por estar ahorrado. Cada año los intereses se suman a tu capital y también generan intereses.">?</button></span><b data-out="interest"></b></div>
           </div>
           <div class="meter" aria-hidden="true"><i data-out="bar"></i></div>
           <p class="note">Cálculo orientativo con un interés técnico bruto anual garantizado del 2,20&nbsp;% para aportaciones periódicas. No incluye participación en beneficios ni fiscalidad.</p>
@@ -608,7 +604,7 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
         </ul>
       </div>
       <div class="quotes">
-        <figure class="quote"><p>“Empecé a ahorrar en la residencia con 50&nbsp;€ al mes. Ahora ni lo noto y ya tengo mi colchón.”</p><figcaption class="who"><span class="av" style="background-image:url(../assets/foto-jovenes.jpg);background-position:47% 20%;background-size:300%"></span><div><b>Laura, 32 años</b><span>MIR de Pediatría</span></div></figcaption></figure>
+        <figure class="quote"><p>“Empecé a ahorrar con 50&nbsp;€ al mes al acabar la residencia. Ahora ni lo noto y ya tengo mi colchón.”</p><figcaption class="who"><span class="av" style="background-image:url(../assets/foto-jovenes.jpg);background-position:47% 20%;background-size:300%"></span><div><b>Laura, 34 años</b><span>Pediatra</span></div></figcaption></figure>
         <figure class="quote"><p>“Me lo explicaron todo sin tecnicismos. Por fin sé qué tengo y para qué.”</p><figcaption class="who"><span class="av" style="background-image:url(../assets/foto-senior.jpg);background-position:74% 18%;background-size:320%"></span><div><b>Carmen, 58 años</b><span>Médica de familia</span></div></figcaption></figure>
       </div>
     </div>
@@ -655,7 +651,7 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
     <div class="cols">
       <div><img src="../assets/logo-mutual-medica-blanco.png" alt="Mutual Médica"><p>La mutualidad de los médicos.<br>Médicos cuidando de médicos desde 1920.</p></div>
       <div><h5>Productos</h5><ul><li><a href="#">Ahorro</a></li><li><a href="#">Inversión</a></li><li><a href="#">Protección</a></li><li><a href="#">Financiación</a></li></ul></div>
-      <div><h5>Tu momento</h5><ul><li><a href="#">Empiezo mi carrera</a></li><li><a href="#">Construyo mi vida</a></li><li><a href="#">Hago crecer mi patrimonio</a></li><li><a href="#">Preparo mi jubilación</a></li></ul></div>
+      <div><h5>Tu momento</h5><ul><li><a href="#">30–40 · Impulso mi carrera</a></li><li><a href="#">40–50 · Consolido mi patrimonio</a></li><li><a href="#">50–65 · Preparo mi jubilación</a></li></ul></div>
       <div><h5>Herramientas</h5><ul><li><a href="#">Simulador de ahorro</a></li><li><a href="#">Recomendador</a></li><li><a href="#">Glosario</a></li><li><a href="#">Guías</a></li></ul></div>
       <div><h5>Mutualistas</h5><ul><li><a href="#">Gestión de prestaciones</a></li><li><a href="#">Área mutualista</a></li><li><a href="#">¿Te ayudamos?</a></li><li><a href="tel:900828899">900 82 88 99</a></li></ul></div>
     </div>
@@ -675,13 +671,13 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
   const box = document.getElementById('quiz');
   const Q = [
     {t:'¿Cuál es tu prioridad ahora mismo?', k:'goal', o:[['save','Ahorrar para una meta concreta'],['grow','Hacer crecer lo que ya tengo'],['protect','Proteger a mi familia'],['fund','Financiar un proyecto o mi formación']]},
-    {t:'¿En qué etapa estás?', k:'stage', o:[['mir','MIR o primeros años'],['30','Entre 30 y 45 años'],['45','Entre 45 y 55 años'],['55','Más de 55 años']]},
+    {t:'¿Cuántos años tienes?', k:'stage', o:[['30','Entre 30 y 40 años'],['40','Entre 40 y 50 años'],['50','Más de 50 años']]},
     {t:'¿Cómo te sientes con el riesgo?', k:'risk', o:[['low','Prefiero seguridad total'],['mid','Acepto algo de riesgo'],['high','Busco más rentabilidad']]}
   ];
   const P = {
     AG:['i-coins','Seguro de Ahorro Garantizado','2,20 % garantizado, sin riesgo'],
     AI:['i-trend','Seguro de Ahorro-Inversión','Aportación única garantizada'],
-    IB:['i-trend','Plan INbestMe','Carteras indexadas a tu perfil'],
+    IB:['i-trend','Plan INbestMe','Fondos socialmente responsables, a tu medida'],
     DE:['i-shield','Seguro de Dependencia','Tu autonomía, protegida'],
     OR:['i-heart','Seguro de Orfandad','El futuro de tus hijos'],
     MV:['i-shield','Seguro Multi-Vida','Tranquilidad para tu familia'],
@@ -691,9 +687,10 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
   const a = {}; let step = 0;
   function pick(){
     const {goal,stage,risk} = a;
-    if (goal==='fund') return stage==='mir' ? ['PM','AG'] : ['PI','AG'];
-    if (goal==='protect') return stage==='mir' ? ['MV','AG'] : stage==='30' ? ['OR','MV'] : ['DE','MV'];
+    if (goal==='fund') return stage==='30' ? ['PM','AG'] : ['PI','AG'];
+    if (goal==='protect') return stage==='50' ? ['DE','MV'] : ['OR','MV'];
     if (goal==='grow') return risk==='low' ? ['AI','AG'] : risk==='mid' ? ['AI','IB'] : ['IB','AI'];
+    if (stage==='50') return risk==='high' ? ['AG','IB'] : ['AG','AI'];
     return risk==='low' ? ['AG','AI'] : ['AG','IB'];
   }
   function render(){
