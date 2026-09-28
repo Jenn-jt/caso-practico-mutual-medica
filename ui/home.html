@@ -283,6 +283,11 @@ form.card{background:#fff;border-radius:var(--r-l);padding:44px;box-shadow:0 30p
 .chk a{color:var(--accent);text-decoration:underline}
 form .btn{width:100%;margin-top:24px}
 .thanks{text-align:center;padding:40px 10px}
+.recap{list-style:none;display:grid;gap:8px;margin:24px 0 12px;text-align:left}
+.recap li{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-radius:14px;background:var(--sky);font-size:var(--fs-1)}
+.recap span{color:var(--ink-3)}.recap b{color:var(--navy);text-align:right}
+.next{display:grid;gap:10px;margin-top:20px}
+.next .btn{width:100%;margin:0;white-space:normal;height:auto;min-height:46px;padding:10px 18px}
 .thanks .ic{width:72px;height:72px;border-radius:50%;background:#E6F4EE;color:var(--ok);display:grid;place-items:center;margin:0 auto 18px}
 
 /* ── Footer ── */
@@ -306,9 +311,26 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
 .tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%) translateY(4px);width:260px;padding:12px 14px;border-radius:12px;background:var(--ink);color:#fff;font-family:var(--body);font-size:14px;font-weight:400;line-height:1.45;text-align:left;box-shadow:0 12px 30px -10px rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:30}
 .tip:hover::after,.tip:focus::after{opacity:1;transform:translateX(-50%)}
 
+/* Menú móvil */
+.burger{display:none;margin-left:auto;width:48px;height:48px;border-radius:14px;border:1px solid var(--line);background:#fff;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.burger span{display:block;width:20px;height:2px;border-radius:2px;background:var(--navy);transition:transform .2s,opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{display:grid;gap:4px;padding:12px 24px 24px;border-top:1px solid var(--line);background:#fff}
+.mnav>a{padding:14px 4px;font-family:var(--head);font-weight:700;font-size:var(--fs-3);color:var(--navy);border-bottom:1px solid var(--sky-2)}
+.mkeep{display:grid;gap:10px;margin-top:14px}
+.mkeep a{display:flex;align-items:center;gap:10px;height:52px;padding:0 18px;border-radius:14px;font-weight:600}
+.mkeep .k1{background:var(--sky);color:var(--navy)}.mkeep .k2{background:var(--navy);color:#fff}
+.mkeep .ico,.mtel .ico{width:18px;height:18px}
+.mtel{display:flex;align-items:center;gap:10px;margin-top:10px;padding:12px 4px;font-weight:700;color:var(--accent)}
+.wrap>*{min-width:0}
+
 /* Responsive básico */
 @media (max-width:1100px){
   .menu{display:none}
+  .burger{display:flex}
+  .keep .k1{display:none}
   .hero .wrap,.panel,.reco,.calc,.why .wrap,.contact .wrap{grid-template-columns:1fr}
   .bento{grid-template-columns:1fr 1fr}.cat.big{grid-row:auto;grid-column:span 2}
   .guides{grid-template-columns:1fr}
@@ -318,8 +340,35 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
   footer .cols{grid-template-columns:1fr 1fr}
 }
 @media (max-width:640px){
-  .keep .k1,.topbar nav,.brand span{display:none}
-  .trust .wrap,.quotes,.grid2,.split{grid-template-columns:1fr 1fr}
+  .topbar nav,.brand span{display:none}
+  .topbar .wrap{justify-content:center}
+  header.main .wrap{gap:12px;height:72px}
+  .brand img{height:38px}
+  .keep{margin-left:auto}.keep .k2{height:44px;padding:0 14px}
+  .burger{margin-left:0}
+  .trust .wrap,.split{grid-template-columns:1fr 1fr}
+  .trust div{padding:22px 12px}.trust div:nth-child(3){border-left:0}
+  .trust div:nth-child(n+3){border-top:1px solid var(--line)}
+  .trust b{font-size:22px}
+  .grid2{grid-template-columns:1fr}
+  .hero{padding:40px 0 64px}.hero .wrap{gap:40px}
+  .ctas .btn{width:100%}
+  .ticks{gap:10px 18px}
+  .g-calc{left:12px;right:12px;width:auto;bottom:16px}
+  .g-rate{top:16px}
+  .tabs{display:grid;grid-template-columns:1fr;width:100%;border-radius:22px;gap:6px}
+  .tabs button{height:auto;padding:12px 18px;border-radius:16px}
+  .panel .story{min-height:360px;padding:28px}
+  .prod{grid-template-columns:44px 1fr auto;gap:14px;padding:18px}
+  .prod .ic{width:44px;height:44px}
+  .cat{padding:28px}
+  .rate-pill{flex-wrap:wrap;border-radius:16px}
+  .split div{padding:14px}
+  .pensumo{padding:28px;gap:24px}.phone{margin:0 auto}
+  .eg div{gap:12px}
+  .call{width:100%}
+  footer .cols{grid-template-columns:1fr 1fr;gap:32px}
+  footer .cols>div:first-child{grid-column:1/-1}
   .quotes{grid-template-columns:1fr}.quote:nth-child(2){transform:none}
   .bento{grid-template-columns:1fr}.cat.big,.cat.wide{grid-column:auto}.cat.wide{flex-direction:column;align-items:flex-start}
   .calc .in,.calc .out,.reco,form.card{padding:28px}
@@ -379,7 +428,20 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
       <a class="k1" href="#"><svg class="ico"><use href="#i-file"/></svg>Gestión de prestaciones</a>
       <a class="k2" href="#"><svg class="ico"><use href="#i-lock"/></svg>Área mutualista</a>
     </div>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
   </div>
+  <nav class="mnav" id="mnav" aria-label="Menú móvil" hidden>
+    <a href="#productos">Productos</a>
+    <a href="#momento">Tu momento</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#aprende">Aprende</a>
+    <a href="#contacto">¿Te ayudamos?</a>
+    <div class="mkeep">
+      <a class="k1" href="#"><svg class="ico"><use href="#i-file"/></svg>Gestión de prestaciones</a>
+      <a class="k2" href="#"><svg class="ico"><use href="#i-lock"/></svg>Área mutualista</a>
+    </div>
+    <a class="mtel" href="tel:900828899"><svg class="ico"><use href="#i-phone"/></svg>900 82 88 99 · Gratuito</a>
+  </nav>
 </header>
 
 <main>
@@ -666,6 +728,15 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
 
 <script src="../js/app.js"></script>
 <script>
+// Menú móvil
+(function(){
+  const b = document.querySelector('.burger'), m = document.getElementById('mnav');
+  if (!b) return;
+  const set = (o) => { b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Cerrar menú' : 'Abrir menú'); m.hidden = !o; };
+  b.addEventListener('click', () => set(b.getAttribute('aria-expanded') !== 'true'));
+  m.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
+})();
+
 // Recomendador en 3 preguntas
 (function(){
   const box = document.getElementById('quiz');
@@ -722,8 +793,27 @@ footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-w
   f.addEventListener('submit', e => {
     e.preventDefault();
     if (!f.checkValidity()) { f.reportValidity(); return; }
-    const n = f.nombre.value.trim();
-    f.innerHTML = `<div class="thanks"><span class="ic"><svg class="ico" style="width:32px;height:32px"><use href="#i-check"/></svg></span><h3>¡Gracias${n?', '+n.replace(/[<>&"]/g,''):''}!</h3><p class="muted" style="margin-top:10px">Un asesor te llamará en menos de 24 h en la franja que has elegido.</p></div>`;
+    const esc = (t) => t.replace(/[<>&"]/g, '');
+    const n = esc(f.nombre.value.trim());
+    const interes = esc(f.interes.value || 'Te orientamos según tu momento');
+    const franja = esc(f.franja.value);
+    const m = document.querySelector('[name="monthly"]'), y = document.querySelector('[name="years"]');
+    const sim = m && y ? `${m.value}&nbsp;€/mes durante ${y.value} años` : '';
+    f.innerHTML = `<div class="thanks">
+      <span class="ic"><svg class="ico" style="width:32px;height:32px"><use href="#i-check"/></svg></span>
+      <h3>¡Hecho${n ? ', ' + n : ''}! Te llamamos pronto.</h3>
+      <p class="muted" style="margin-top:8px">Un asesor especializado en médicos te llamará en menos de 24 h.</p>
+      <ul class="recap">
+        <li><span>Franja</span><b>${franja}</b></li>
+        <li><span>Te interesa</span><b>${interes}</b></li>
+        ${sim ? `<li><span>Tu simulación</span><b>${sim}</b></li>` : ''}
+      </ul>
+      <p class="small muted">El asesor ya tendrá esta información: no tendrás que repetirla.</p>
+      <div class="next">
+        <a class="btn btn-ghost btn-sm" href="#aprende"><svg class="ico"><use href="#i-book"/></svg>Mientras tanto, lee la guía de 3 min</a>
+        <a class="btn btn-ghost btn-sm" href="tel:900828899"><svg class="ico"><use href="#i-phone"/></svg>¿Prefieres llamar tú? 900 82 88 99</a>
+      </div>
+    </div>`;
   });
 })();
 </script>

@@ -51,7 +51,7 @@ a{color:inherit;text-decoration:none}
 .cover .foot{color:#9DBBD3}
 
 /* índice */
-.toc{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6cqw;margin-top:auto;margin-bottom:3cqw}
+.toc{display:grid;grid-template-columns:repeat(5,1fr);gap:1.6cqw;margin-top:auto;margin-bottom:3cqw}
 .toc a{border:1px solid var(--line);border-radius:1.4cqw;padding:2cqw;display:flex;flex-direction:column;gap:.8cqw;transition:border-color .2s,transform .2s}
 .toc a:hover{border-color:var(--accent);transform:translateY(-.3cqw)}
 .toc .n{font-family:var(--head);font-size:3.4cqw;font-weight:800;color:var(--accent);line-height:1}
@@ -158,6 +158,60 @@ a{color:inherit;text-decoration:none}
 .swatches span{display:flex;flex-direction:column;gap:.3cqw;font-size:.8cqw;color:var(--ink-3)}
 .swatches span::before{content:"";width:3.4cqw;height:2.2cqw;border-radius:.5cqw;background:var(--c);border:1px solid var(--line)}
 
+/* ── Anexo ── */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw;margin-top:1.8cqw;flex:1;min-height:0}
+.ba .col{display:flex;flex-direction:column;gap:1.1cqw;min-height:0}
+.ba .lbl{display:inline-flex;align-self:flex-start;font-size:.95cqw;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.35cqw .9cqw;border-radius:999px}
+.ba .lbl.a{background:#FDECEA;color:#B42318}.ba .lbl.d{background:var(--sky);color:var(--accent)}
+.ba .shot{position:relative;border-radius:1cqw;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/820}
+.ba .shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.mk{position:absolute;width:2cqw;height:2cqw;border-radius:50%;background:#D92D20;color:#fff;font-weight:800;font-size:1cqw;display:grid;place-items:center;box-shadow:0 0 0 .35cqw rgba(217,45,32,.25)}
+.mk.d{background:var(--accent);box-shadow:0 0 0 .35cqw rgba(15,121,187,.25)}
+.ba ol{list-style:none;display:grid;gap:.5cqw;counter-reset:n}
+.ba li{counter-increment:n;display:flex;gap:.8cqw;font-size:.98cqw;line-height:1.4;color:var(--ink-2)}
+.ba li::before{content:counter(n);flex:none;width:1.6cqw;height:1.6cqw;border-radius:50%;display:grid;place-items:center;font-size:.8cqw;font-weight:800;color:#fff;background:#D92D20;margin-top:.05cqw}
+.ba .col.after li::before{background:var(--accent)}
+.ba li b{color:var(--navy)}
+
+.bench{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2cqw;margin-top:1.8cqw}
+.bc{border:1px solid var(--line);border-radius:1.2cqw;padding:1.5cqw;display:flex;flex-direction:column;gap:.8cqw}
+.bc .type{font-size:.82cqw;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.bc.direct .type{color:#B42318}
+.bc h4{font-size:1.5cqw}
+.bc .good{font-size:.98cqw;line-height:1.45;color:var(--ink-2)}
+.bc .take{margin-top:auto;background:var(--sky);border-radius:.9cqw;padding:1cqw 1.1cqw;font-size:.95cqw;line-height:1.4;color:var(--navy)}
+.bc .take b{display:block;font-size:.8cqw;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:.3cqw}
+.insight{margin-top:1.6cqw;margin-bottom:3cqw;background:var(--navy);color:#fff;border-radius:1.2cqw;padding:1.4cqw 2cqw;display:flex;gap:1.6cqw;align-items:center}
+.insight b{font-family:var(--head);font-size:1.3cqw;color:#7FBCE4;flex:none}
+.insight p{font-size:1.15cqw;line-height:1.45;color:#DCE9F4}
+.src{font-size:.78cqw;color:var(--ink-3);margin-top:.6cqw}
+
+.flow{display:grid;grid-template-columns:repeat(7,1fr);gap:.6cqw;margin-top:1.8cqw}
+.flow div{background:var(--sky);border-radius:1cqw;padding:1cqw;position:relative}
+.flow div:not(:last-child)::after{content:"→";position:absolute;right:-.55cqw;top:50%;transform:translate(50%,-50%);font-size:1.1cqw;color:var(--accent);font-weight:800;z-index:1}
+.flow b{display:block;font-family:var(--head);font-size:1.05cqw;color:var(--navy)}
+.flow span{display:block;font-size:.8cqw;font-weight:700;color:var(--accent);margin-bottom:.2cqw}
+.flow p{font-size:.85cqw;color:var(--ink-2);line-height:1.35;margin-top:.3cqw}
+.flow .hl{background:var(--accent)}.flow .hl b,.flow .hl p,.flow .hl span{color:#fff}
+.flow .nv{background:var(--navy)}.flow .nv b,.flow .nv p,.flow .nv span{color:#fff}
+.conf{display:grid;grid-template-columns:.8fr 1.2fr;gap:2.4cqw;margin-top:1.8cqw;flex:1;min-height:0;margin-bottom:2.6cqw}
+.conf .frame{border-radius:1.2cqw;overflow:hidden;border:1px solid var(--line);box-shadow:0 1.5cqw 3cqw -2cqw rgba(0,30,60,.4)}
+.conf .frame{background:#fff;position:relative;min-height:0}.conf .frame img{position:absolute;inset:4%;width:92%;height:92%;object-fit:contain}
+
+.phones{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6cqw;margin-top:1.4cqw;align-items:start}
+.ph-f{display:flex;flex-direction:column;gap:.9cqw;align-items:center}
+.ph-f .dev{width:74%;aspect-ratio:390/760;border-radius:2.2cqw;border:.55cqw solid #0E2233;overflow:hidden;background:#fff;box-shadow:0 1.6cqw 3cqw -1.6cqw rgba(0,30,60,.5)}
+.ph-f .dev img{width:100%;height:100%;object-fit:cover;object-position:top}
+.ph-f b{font-family:var(--head);font-size:1.15cqw;color:var(--navy);text-align:center}
+.ph-f p{font-size:.92cqw;color:var(--ink-3);text-align:center;line-height:1.4}
+
+.hyp{width:100%;border-collapse:separate;border-spacing:0 .5cqw;margin-top:1.4cqw}
+.hyp th{font-size:.85cqw;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);text-align:left;padding:0 1cqw .2cqw}
+.hyp td{background:var(--sky);padding:1cqw;font-size:.98cqw;line-height:1.4;color:var(--ink-2);vertical-align:top}
+.hyp td:first-child{border-radius:.9cqw 0 0 .9cqw;color:var(--navy);font-weight:600;width:34%}
+.hyp td:last-child{border-radius:0 .9cqw .9cqw 0;font-family:var(--head);font-weight:800;color:var(--accent);font-size:1.2cqw;white-space:nowrap}
+.hyp td i{font-style:normal;display:inline-grid;place-items:center;width:1.6cqw;height:1.6cqw;border-radius:50%;background:var(--accent);color:#fff;font-size:.8cqw;margin-right:.6cqw}
+
 @media (max-width:700px){.dock{font-size:12px}.dock a{padding:6px 9px}.deck{padding:16px 8px 90px;gap:16px}}
 @media print{
   @page{size:1400px 787.5px;margin:0}
@@ -174,6 +228,7 @@ a{color:inherit;text-decoration:none}
   <a href="#fases">1 · Fases</a>
   <a href="#wireframes">2 · Wireframes</a>
   <a href="#ui">3 · Diseño UI</a>
+  <a href="#anexo">Anexo</a>
 </nav>
 
 <div class="deck">
@@ -204,6 +259,7 @@ a{color:inherit;text-decoration:none}
         <a href="#fases"><span class="n">01</span><h4>Fases del proyecto</h4><p>Del research al desarrollo, con los puntos clave de cada fase.</p></a>
         <a href="#wireframes"><span class="n">02</span><h4>Wireframes</h4><p>Home, categoría Ahorro y Seguro de Ahorro Garantizado.</p></a>
         <a href="#ui"><span class="n">03</span><h4>Diseño UI</h4><p>Home con el look&amp;feel evolucionado de la marca.</p></a>
+        <a href="#anexo"><span class="n">+</span><h4>Anexo</h4><p>Antes y después, benchmark, flujo, móvil e hipótesis.</p></a>
       </div>
     </div>
     <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>02</span></div>
@@ -392,6 +448,134 @@ a{color:inherit;text-decoration:none}
     <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>08</span></div>
   </section>
 
+  <!-- ANEXO 1 · ANTES Y DESPUÉS -->
+  <section class="slide" id="anexo">
+    <div class="s">
+      <p class="kicker">Anexo · Antes y después</p>
+      <h2>Del portal informativo al portal que convierte</h2>
+      <div class="ba">
+        <div class="col">
+          <span class="lbl a">Hoy · jubilaciondelmedico.com</span>
+          <div class="shot"><img src="assets/shots/antes-hero.jpg" alt="Home actual del portal de jubilación del médico">
+            <span class="mk" style="left:4%;top:17%">1</span><span class="mk" style="left:4%;top:56%">2</span><span class="mk" style="left:41%;top:4%">3</span></div>
+          <ol>
+            <li><span><b>Marca y mensaje de jubilación:</b> el médico de 30 años no se siente interpelado.</span></li>
+            <li><span><b>CTAs con el texto cortado</b> ("…en positivo: con tran…") y sin jerarquía.</span></li>
+            <li><span><b>Herramientas dispersas:</b> simulador y calculadoras en menús separados.</span></li>
+            <li><span><b>El 2,20&nbsp;% garantizado no aparece</b> en toda la home.</span></li>
+            <li><span><b>Productos en listas de texto,</b> sin datos, y solo ahorro y jubilación.</span></li>
+          </ol>
+        </div>
+        <div class="col after">
+          <span class="lbl d">Propuesta · Futuro del Médico</span>
+          <div class="shot"><img src="assets/shots/ui-home.jpg" alt="Propuesta de home">
+            <span class="mk d" style="left:3%;top:30%">1</span><span class="mk d" style="left:3%;top:78%">2</span><span class="mk d" style="left:58%;top:62%">3</span><span class="mk d" style="left:88%;top:26%">4</span></div>
+          <ol>
+            <li><span><b>Marca para toda la carrera</b> y navegación por momento vital (30–65).</span></li>
+            <li><span><b>Un CTA principal claro</b> hacia el recomendador y "Te llamamos" como secundario.</span></li>
+            <li><span><b>Simulador y recomendador</b> integrados en la propia home.</span></li>
+            <li><span><b>2,20&nbsp;% visible</b> en hero, categorías y simulador.</span></li>
+            <li><span><b>4 categorías y 8 productos</b> con su dato clave y glosario contextual.</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI · Anexo</span><span>09</span></div>
+  </section>
+
+  <!-- ANEXO 2 · BENCHMARK -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">Anexo · Benchmark</p>
+      <h2>Qué hace la competencia y qué nos llevamos</h2>
+      <div class="bench">
+        <div class="bc direct"><span class="type">Competidor directo</span><h4>PSN</h4>
+          <p class="good">Mutua de profesionales sanitarios. Pone en el hero su rentabilidad: <b>2,15&nbsp;% garantizado</b> y "100&nbsp;% disponible", y ofrece calculadoras rápidas.</p>
+          <p class="take"><b>Nos llevamos</b>El dato en portada. Mutual Médica ofrece un 2,20&nbsp;% y hoy no lo comunica en su home.</p></div>
+        <div class="bc direct"><span class="type">Competidor directo</span><h4>A.M.A.</h4>
+          <p class="good">La mutua de los profesionales sanitarios. Su CTA principal promete tiempo: <b>"Calcula precio en menos de 2 minutos"</b>.</p>
+          <p class="take"><b>Nos llevamos</b>Una promesa concreta en el CTA: "Descubre tu plan en 1 minuto".</p></div>
+        <div class="bc"><span class="type">Referente digital</span><h4>Indexa Capital</h4>
+          <p class="good">Explica la inversión en <b>3 pasos</b>, con un test de perfil de 2 minutos y señales de confianza con datos (clientes, supervisión CNMV, costes).</p>
+          <p class="take"><b>Nos llevamos</b>Recomendador corto, proceso explicado en 3 pasos y confianza con cifras (+100 años, +100.500 médicos).</p></div>
+        <div class="bc"><span class="type">Referente digital</span><h4>MyInvestor</h4>
+          <p class="good">Barrera de entrada mínima (<b>invertir desde 1&nbsp;€</b>), lenguaje cercano, formación (blog y webinars) y enfoque móvil.</p>
+          <p class="take"><b>Nos llevamos</b>"Empieza con lo que puedas", contenidos cortos para capacitar y diseño pensado para el móvil.</p></div>
+      </div>
+      <div class="insight"><b>Oportunidad</b><p>Ni PSN ni A.M.A. organizan su home por momento vital ni acompañan al médico no experto en la decisión. Ese es el espacio de Futuro del Médico: <b style="color:#fff;font-size:inherit">el que te entiende en cada etapa.</b></p></div>
+      <p class="src" style="margin-top:-2.4cqw">Webs públicas consultadas en septiembre de 2026.</p>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI · Anexo</span><span>10</span></div>
+  </section>
+
+  <!-- ANEXO 3 · FLUJO DE CONVERSIÓN -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">Anexo · Flujo de conversión</p>
+      <h2>Del primer clic a la llamada del asesor</h2>
+      <div class="flow">
+        <div><span>1 · Llega</span><b>Entrada</b><p>SEO, campañas por etapa, newsletter</p></div>
+        <div><span>2 · Se orienta</span><b>Home</b><p>Elige su momento o hace el recomendador</p></div>
+        <div><span>3 · Compara</span><b>Categoría</b><p>Tarjetas y comparativa en lenguaje claro</p></div>
+        <div><span>4 · Simula</span><b>Producto</b><p>Calculadora al 2,20&nbsp;%</p></div>
+        <div class="hl"><span>5 · Convierte</span><b>Formulario</b><p>4 campos + simulación adjunta</p></div>
+        <div class="hl"><span>6 · Confía</span><b>Confirmación</b><p>Resumen y qué va a pasar</p></div>
+        <div class="nv"><span>7 · Contrata</span><b>Llamada</b><p>Asesor con contexto, en menos de 24 h</p></div>
+      </div>
+      <div class="conf">
+        <div class="frame"><img src="assets/shots/confirmacion.jpg" alt="Pantalla de confirmación tras enviar el formulario"></div>
+        <div class="box" style="align-self:start">
+          <h3>El momento que casi nadie diseña</h3>
+          <p style="margin-bottom:1cqw">Como la contratación es telefónica, <b style="color:var(--navy)">lo que pasa después del formulario decide la venta</b>. Diseñamos esa espera:</p>
+          <ul>
+            <li>Resumen de lo que ha pedido: franja, producto y simulación.</li>
+            <li>"No tendrás que repetirlo": el asesor recibe el contexto en el CRM.</li>
+            <li>Siguiente paso útil mientras espera: una guía de 3 minutos.</li>
+            <li>Salida inmediata si tiene prisa: llamar al 900 82 88 99.</li>
+            <li>Si no deja sus datos: recordatorio con su simulación, solo con consentimiento.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI · Anexo</span><span>11</span></div>
+  </section>
+
+  <!-- ANEXO 4 · MÓVIL -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">Anexo · Versión móvil</p>
+      <h2>El target de 30–40 años decide desde el móvil</h2>
+      <p class="sub">El brief pide desktop; esta es la misma home adaptada, sin perder ninguna función.</p>
+      <div class="phones">
+        <div class="ph-f"><div class="dev"><img src="assets/shots/m-hero.jpg" alt="Home móvil: hero"></div><b>Hero</b><p>CTAs a todo el ancho y el dato de 45.147&nbsp;€ visible sin hacer scroll.</p></div>
+        <div class="ph-f"><div class="dev"><img src="assets/shots/m-momento.jpg" alt="Home móvil: tu momento"></div><b>Tu momento</b><p>Etapas apiladas, fáciles de pulsar con el pulgar.</p></div>
+        <div class="ph-f"><div class="dev"><img src="assets/shots/m-simulador.jpg" alt="Home móvil: simulador"></div><b>Simulador</b><p>Sliders grandes y resultado en tiempo real.</p></div>
+        <div class="ph-f"><div class="dev"><img src="assets/shots/m-menu.jpg" alt="Home móvil: menú"></div><b>Menú</b><p>"Gestión de prestaciones" y "Área mutualista" siempre a un toque.</p></div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI · Anexo</span><span>12</span></div>
+  </section>
+
+  <!-- ANEXO 5 · HIPÓTESIS -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">Anexo · Hipótesis y métricas</p>
+      <h2>Cada decisión es una hipótesis que vamos a medir</h2>
+      <table class="hyp">
+        <thead><tr><th>Hipótesis</th><th>Cómo la validamos</th><th>Métrica</th><th>Objetivo inicial</th></tr></thead>
+        <tbody>
+          <tr><td><i>1</i>Navegar por momento vital hace el portal relevante para los médicos de 30–40.</td><td>Test A/B: home por etapas vs. home por producto.</td><td>Clics a producto del segmento 30–40</td><td>+20&nbsp;%</td></tr>
+          <tr><td><i>2</i>Mostrar el 2,20&nbsp;% en portada despierta el interés por el ahorro.</td><td>Test A/B del hero con y sin el dato.</td><td>Usos del simulador</td><td>+15&nbsp;%</td></tr>
+          <tr><td><i>3</i>El recomendador reduce el abandono del médico no experto.</td><td>Test de usabilidad + embudo en analítica.</td><td>% que lo completa · % que deja lead</td><td>40&nbsp;% · 10&nbsp;%</td></tr>
+          <tr><td><i>4</i>Un "Te llamamos" siempre visible genera más leads.</td><td>Test A/B con y sin CTA flotante.</td><td>Leads por sesión</td><td>+25&nbsp;%</td></tr>
+          <tr><td><i>5</i>Si el asesor recibe la simulación, se cierran más contratos.</td><td>Comparar leads con y sin contexto en el CRM.</td><td>Ratio lead → póliza</td><td>+10&nbsp;%</td></tr>
+        </tbody>
+      </table>
+      <p class="src" style="margin-top:1cqw">Objetivos orientativos: se ajustan con los datos reales del portal en la fase de Discovery.</p>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI · Anexo</span><span>13</span></div>
+  </section>
+
   <!-- CIERRE -->
   <section class="slide cover">
     <div class="s">
@@ -402,7 +586,7 @@ a{color:inherit;text-decoration:none}
         <div><b>Jenifer Jaldo</b>Senior UX/UI Designer</div>
       </div>
     </div>
-    <div class="foot"><span>Caso práctico UX/UI · Mutual Médica</span><span>09</span></div>
+    <div class="foot"><span>Caso práctico UX/UI · Mutual Médica</span><span>14</span></div>
   </section>
 </div>
 
