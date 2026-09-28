@@ -6,8 +6,22 @@
     btn.addEventListener('click', () => {
       const on = document.body.classList.toggle('notes');
       btn.setAttribute('aria-pressed', on);
+      btn.lastChild.textContent = on ? 'Ocultar anotaciones UX' : 'Mostrar anotaciones UX';
+      fit();
     });
   }
+
+  // Ajusta el lienzo de 1440 px al ancho de la pantalla (portátiles)
+  function fit() {
+    const c = document.querySelector('.canvas');
+    if (!c) return;
+    const panel = document.body.classList.contains('notes') ? 380 : 0;
+    const z = Math.min(1, (window.innerWidth - panel - 48) / 1440);
+    c.style.zoom = z;
+    c.style.marginLeft = panel ? '24px' : '';
+  }
+  fit();
+  window.addEventListener('resize', fit);
 
   // Calculadora: aportación mensual + años al 2,20 % bruto anual
   const RATE = 0.022;
