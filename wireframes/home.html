@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wireframe · Home · Futuro del Médico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/wire.css">
+</head>
+<body>
+
+<div class="deck-bar">
+  <a href="../index.html"><strong>Caso práctico · Mutual Médica</strong></a>
+  <span class="muted">Wireframes desktop 1440</span>
+  <nav>
+    <a href="home.html" aria-current="page">1 · Home</a>
+    <a href="ahorro.html">2 · Categoría Ahorro</a>
+    <a href="seguro-ahorro-garantizado.html">3 · Producto</a>
+  </nav>
+  <button data-toggle-notes aria-pressed="false">Anotaciones UX</button>
+</div>
+
+<main class="canvas">
+
+  <!-- HEADER -->
+  <div class="topbar">
+    <div class="row"><span>Fundación</span><span>Web Mutual Médica</span><span>Actualidad</span></div>
+    <div class="row"><span>☎ 900 82 88 99 · L-V 8-20 h</span><span>ES ▾</span><span>⌕</span></div>
+  </div>
+  <header class="header">
+    <span class="n" style="left:100px;top:-14px">1</span>
+    <div class="logo">LOGO</div>
+    <nav class="menu">
+      <a>Productos <span class="caret">▼</span></a>
+      <a>Tu momento <span class="caret">▼</span></a>
+      <a>Simuladores</a>
+      <a>Aprende</a>
+      <a>¿Te ayudamos?</a>
+    </nav>
+    <div class="keep">
+      <span class="n" style="right:-18px;top:-14px">2</span>
+      <a>Gestión de prestaciones</a>
+      <a class="dark">Área mutualista</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="padding:64px 0 72px">
+    <span class="n" style="left:100px;top:40px">3</span>
+    <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;align-items:center;gap:56px">
+      <div>
+        <p class="eyebrow">Médicos cuidando de médicos · desde 1920</p>
+        <h1>Cuidas de todos.<br>Nosotros te ayudamos a cuidar de tu futuro.</h1>
+        <p class="lead" style="margin:20px 0 32px">Ahorro, inversión, protección y financiación pensados para cada etapa de tu carrera. Sin letra pequeña y con alguien que te lo explica.</p>
+        <div class="row">
+          <a class="btn primary">Descubre tu plan en 1 minuto →</a>
+          <a class="btn">Quiero que me llaméis</a>
+        </div>
+        <div class="row small muted" style="margin-top:24px;gap:24px">
+          <span>✓ Sin compromiso</span><span>✓ Asesor especializado en médicos</span><span>✓ Beneficios reinvertidos en ti</span>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div class="img" style="height:440px"><span style="left:auto;right:12px;top:10px;bottom:auto">Foto · médicos jóvenes en el hospital</span></div>
+        <div class="card" style="position:absolute;left:-40px;bottom:-28px;width:280px;box-shadow:0 10px 30px rgba(0,0,0,.08)">
+          <span class="n" style="right:-12px;top:-12px">4</span>
+          <p class="small muted">Si ahorras 150 €/mes durante 20 años</p>
+          <p style="font-size:var(--fs-xl);font-weight:700">45.147 €</p>
+          <p class="small muted">Interés garantizado 2,20&nbsp;% · <span class="link">Calcula el tuyo</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section style="padding:28px 0;background:var(--fill)">
+    <div class="wrap grid g4" style="text-align:center">
+      <div><h3>+100 años</h3><p class="small muted">al lado del colectivo médico</p></div>
+      <div><h3>+100.500</h3><p class="small muted">médicos mutualistas</p></div>
+      <div><h3>100&nbsp;%</h3><p class="small muted">beneficios reinvertidos</p></div>
+      <div><h3>2,20&nbsp;%</h3><p class="small muted">interés garantizado en ahorro</p></div>
+    </div>
+  </section>
+
+  <!-- MOMENTO VITAL -->
+  <section id="momento">
+    <span class="n" style="left:100px;top:60px">5</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Tu momento</p><h2>¿En qué punto de tu carrera estás?</h2></div>
+        <p>Elige tu etapa y te mostramos solo lo que tiene sentido para ti ahora.</p>
+      </div>
+      <div data-tabs>
+        <div role="tablist" class="grid g4" style="margin-bottom:24px">
+          <button role="tab" aria-selected="true" aria-controls="t1" class="card" style="text-align:left;cursor:pointer"><p class="small muted">MIR y primeros años</p><h4>Empiezo mi carrera</h4></button>
+          <button role="tab" aria-selected="false" aria-controls="t2" class="card" style="text-align:left;cursor:pointer"><p class="small muted">30 – 45 años</p><h4>Construyo mi vida</h4></button>
+          <button role="tab" aria-selected="false" aria-controls="t3" class="card" style="text-align:left;cursor:pointer"><p class="small muted">45 – 55 años</p><h4>Hago crecer mi patrimonio</h4></button>
+          <button role="tab" aria-selected="false" aria-controls="t4" class="card" style="text-align:left;cursor:pointer"><p class="small muted">+55 años</p><h4>Preparo mi jubilación</h4></button>
+        </div>
+        <div id="t1" role="tabpanel" class="card fill grid" style="grid-template-columns:1fr 2fr;gap:32px;padding:32px">
+          <div><h3>Tu carrera arranca. Tu futuro también.</h3><p class="muted" style="margin-top:8px">Financia tu formación y empieza a ahorrar con poco, sin riesgo.</p><a class="link" style="display:inline-block;margin-top:16px">Ver todo para esta etapa →</a></div>
+          <div class="grid g3">
+            <div class="card"><span class="tag">Financiación</span><h4 style="margin:12px 0 4px">Préstamo MIR</h4><p class="small muted">Para tu residencia, traslado o preparación.</p></div>
+            <div class="card"><span class="tag">Ahorro</span><h4 style="margin:12px 0 4px">Seguro de Ahorro Garantizado</h4><p class="small muted">Desde lo que puedas, al 2,20&nbsp;%.</p></div>
+            <div class="card"><span class="tag">Inversión</span><h4 style="margin:12px 0 4px">Plan INbestMe</h4><p class="small muted">Inversión automatizada y sostenible.</p></div>
+          </div>
+        </div>
+        <div id="t2" role="tabpanel" hidden class="card fill grid" style="grid-template-columns:1fr 2fr;gap:32px;padding:32px">
+          <div><h3>Casa, familia, proyectos.</h3><p class="muted" style="margin-top:8px">Protege a los tuyos y haz realidad tus planes.</p><a class="link" style="display:inline-block;margin-top:16px">Ver todo para esta etapa →</a></div>
+          <div class="grid g3">
+            <div class="card"><span class="tag">Financiación</span><h4 style="margin:12px 0 4px">Préstamo Ilusiona</h4><p class="small muted">Para tus proyectos personales.</p></div>
+            <div class="card"><span class="tag">Protección</span><h4 style="margin:12px 0 4px">Seguro de Orfandad</h4><p class="small muted">El futuro de tus hijos, asegurado.</p></div>
+            <div class="card"><span class="tag">Protección</span><h4 style="margin:12px 0 4px">Seguro Multi-Vida</h4><p class="small muted">Tranquilidad para tu familia.</p></div>
+          </div>
+        </div>
+        <div id="t3" role="tabpanel" hidden class="card fill grid" style="grid-template-columns:1fr 2fr;gap:32px;padding:32px">
+          <div><h3>Que tu dinero trabaje para ti.</h3><p class="muted" style="margin-top:8px">Rentabilidad con el riesgo que elijas.</p><a class="link" style="display:inline-block;margin-top:16px">Ver todo para esta etapa →</a></div>
+          <div class="grid g3">
+            <div class="card"><span class="tag">Inversión</span><h4 style="margin:12px 0 4px">Seguro de Ahorro-Inversión</h4><p class="small muted">Aportación única garantizada.</p></div>
+            <div class="card"><span class="tag">Inversión</span><h4 style="margin:12px 0 4px">Plan INbestMe</h4><p class="small muted">Carteras indexadas a tu medida.</p></div>
+            <div class="card"><span class="tag">Protección</span><h4 style="margin:12px 0 4px">Seguro de Dependencia</h4><p class="small muted">Por si un día necesitas ayuda.</p></div>
+          </div>
+        </div>
+        <div id="t4" role="tabpanel" hidden class="card fill grid" style="grid-template-columns:1fr 2fr;gap:32px;padding:32px">
+          <div><h3>Jubílate con el nivel de vida que quieres.</h3><p class="muted" style="margin-top:8px">Maximiza tus ahorros y protege a tu familia.</p><a class="link" style="display:inline-block;margin-top:16px">Ver todo para esta etapa →</a></div>
+          <div class="grid g3">
+            <div class="card"><span class="tag">Ahorro</span><h4 style="margin:12px 0 4px">Seguro de Ahorro Garantizado</h4><p class="small muted">Cobra en capital o en renta.</p></div>
+            <div class="card"><span class="tag">Inversión</span><h4 style="margin:12px 0 4px">Seguro de Ahorro-Inversión</h4><p class="small muted">Sin riesgo de mercado.</p></div>
+            <div class="card"><span class="tag">Protección</span><h4 style="margin:12px 0 4px">Seguro de Dependencia</h4><p class="small muted">Tu autonomía, protegida.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section>
+    <span class="n" style="left:100px;top:60px">6</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Productos</p><h2>¿Qué necesitas hoy?</h2></div>
+        <a class="link">Ver todos los productos →</a>
+      </div>
+      <div class="grid g4">
+        <div class="card stack"><div class="ico">◔</div><h3>Ahorro</h3><p class="muted">Guarda para tus metas con interés garantizado.</p><p class="small">Ahorro Garantizado · Ahorro-Inversión · INbestMe</p><a class="link small">Ver ahorro →</a></div>
+        <div class="card stack"><div class="ico">↗</div><h3>Inversión</h3><p class="muted">Haz crecer tu patrimonio a tu ritmo.</p><p class="small">Ahorro-Inversión · INbestMe</p><a class="link small">Ver inversión →</a></div>
+        <div class="card stack"><div class="ico">◇</div><h3>Protección</h3><p class="muted">Cuida de ti y de los que más quieres.</p><p class="small">Dependencia · Orfandad · Multi-Vida</p><a class="link small">Ver protección →</a></div>
+        <div class="card stack"><div class="ico">€</div><h3>Financiación</h3><p class="muted">Impulsa tu formación y tus proyectos.</p><p class="small">Préstamo MIR · Préstamo Ilusiona</p><a class="link small">Ver financiación →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMENDADOR -->
+  <section style="background:var(--fill)">
+    <span class="n" style="left:100px;top:60px">7</span>
+    <div class="wrap grid g2" style="align-items:center;gap:64px">
+      <div>
+        <p class="eyebrow">Recomendador</p>
+        <h2>¿No sabes por dónde empezar? Te orientamos en 3 preguntas.</h2>
+        <p class="lead" style="margin:16px 0 28px">Sin datos personales. Al final verás qué productos encajan contigo y podrás pedir que te llamemos.</p>
+        <a class="btn primary">Empezar ahora →</a>
+      </div>
+      <div class="card" style="padding:32px">
+        <p class="small muted">Pregunta 1 de 3</p>
+        <div style="height:6px;background:var(--fill-2);border-radius:3px;margin:10px 0 20px"><div style="width:33%;height:100%;background:var(--ink);border-radius:3px"></div></div>
+        <h3 style="margin-bottom:20px">¿Cuál es tu prioridad ahora mismo?</h3>
+        <div class="stack">
+          <div class="input" style="color:var(--ink)">○&nbsp; Ahorrar para una meta concreta</div>
+          <div class="input" style="color:var(--ink)">○&nbsp; Hacer crecer lo que ya tengo</div>
+          <div class="input" style="color:var(--ink)">○&nbsp; Proteger a mi familia</div>
+          <div class="input" style="color:var(--ink)">○&nbsp; Financiar un proyecto o mi formación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA TEASER -->
+  <section>
+    <span class="n" style="left:100px;top:60px">8</span>
+    <div class="wrap grid" style="grid-template-columns:1fr 1fr;gap:64px;align-items:center" data-calc>
+      <div>
+        <p class="eyebrow">Simulador</p>
+        <h2>¿Cuánto tendrías si empiezas hoy?</h2>
+        <p class="lead" style="margin:16px 0">Mueve los valores y descubre el capital que puedes construir con el Seguro de Ahorro Garantizado.</p>
+        <div class="stack" style="margin-top:28px">
+          <label class="field">Aportación mensual <span data-out="monthly" style="font-size:var(--fs-l)"></span></label>
+          <input type="range" name="monthly" min="30" max="1000" step="10" value="150" aria-label="Aportación mensual">
+          <label class="field" style="margin-top:20px">Durante <span data-out="years" style="font-size:var(--fs-l)"></span></label>
+          <input type="range" name="years" min="1" max="40" value="20" aria-label="Años">
+        </div>
+      </div>
+      <div class="card fill" style="padding:40px">
+        <p class="muted">Capital estimado</p>
+        <p data-out="total" style="font-size:var(--fs-xxl);font-weight:700"></p>
+        <div class="row small" style="justify-content:space-between;margin:20px 0 8px"><span>Aportado: <b data-out="paid"></b></span><span>Intereses: <b data-out="interest"></b></span></div>
+        <div style="height:12px;background:var(--fill-3);border-radius:6px;overflow:hidden;display:flex;justify-content:flex-end"><div data-out="bar" style="background:var(--ink);height:100%"></div></div>
+        <p class="small muted" style="margin:16px 0 24px">Interés técnico garantizado <b>2,20&nbsp;% bruto anual</b>. Cálculo orientativo.</p>
+        <a class="btn primary">Quiero este plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENSUMO -->
+  <section style="padding:40px 0">
+    <span class="n" style="left:100px;top:30px">9</span>
+    <div class="wrap card fill row" style="padding:32px 40px;gap:32px">
+      <div class="img" style="width:120px;height:120px;flex:none;border-radius:24px"><span>App</span></div>
+      <div style="flex:1"><span class="tag dark">Regalo</span><h3 style="margin:10px 0 6px">Ahorra sin darte cuenta con Pensumo, gratis.</h3><p class="muted">Al contratar cualquier producto de ahorro, te regalamos la app que redondea tus compras y guarda la diferencia.</p></div>
+      <a class="link">Saber más</a>
+    </div>
+  </section>
+
+  <!-- APRENDE -->
+  <section>
+    <span class="n" style="left:100px;top:60px">10</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Aprende</p><h2>Finanzas claras, en 3 minutos.</h2></div>
+        <div class="row"><a class="btn sm">Glosario A-Z</a><a class="link small">Ver todas las guías →</a></div>
+      </div>
+      <div class="grid g3">
+        <div class="stack"><div class="img" style="height:200px"><span>Imagen</span></div><span class="tag">Guía · 3 min</span><h4>Ahorro vs. inversión: ¿cuál es para mí?</h4></div>
+        <div class="stack"><div class="img" style="height:200px"><span>Imagen</span></div><span class="tag">Guía · 4 min</span><h4>Qué pensión tendré como médico y cómo complementarla</h4></div>
+        <div class="stack"><div class="img" style="height:200px"><span>Imagen</span></div><span class="tag">Vídeo · 2 min</span><h4>¿Qué es la participación en beneficios?</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS + POR QUÉ -->
+  <section style="background:var(--fill)">
+    <span class="n" style="left:100px;top:60px">11</span>
+    <div class="wrap grid" style="grid-template-columns:1fr 1.4fr;gap:64px">
+      <div>
+        <p class="eyebrow">Por qué Mutual Médica</p>
+        <h2>Somos médicos cuidando de médicos.</h2>
+        <ul class="stack" style="list-style:none;margin-top:24px">
+          <li class="row"><div class="ico sm">✓</div>Sin accionistas: los beneficios se reinvierten en ti.</li>
+          <li class="row"><div class="ico sm">✓</div>Más de 100 años de solvencia y experiencia.</li>
+          <li class="row"><div class="ico sm">✓</div>Asesores que conocen la carrera médica.</li>
+        </ul>
+      </div>
+      <div class="grid g2">
+        <div class="card"><p>"Empecé a ahorrar en la residencia con 50 € al mes. Ahora ni lo noto y ya tengo un colchón."</p><div class="row" style="margin-top:16px"><div class="ico" style="border-radius:50%"></div><div><b class="small">Laura, 32</b><p class="small muted">MIR Pediatría</p></div></div></div>
+        <div class="card"><p>"Me explicaron todo sin tecnicismos. Por fin entiendo qué tengo y para qué."</p><div class="row" style="margin-top:16px"><div class="ico" style="border-radius:50%"></div><div><b class="small">Jordi, 54</b><p class="small muted">Cardiólogo</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="contacto">
+    <span class="n" style="left:100px;top:60px">12</span>
+    <div class="wrap grid" style="grid-template-columns:1fr 1.1fr;gap:64px;align-items:start">
+      <div>
+        <p class="eyebrow">Te llamamos</p>
+        <h2>Habla con un asesor. Sin compromiso.</h2>
+        <p class="lead" style="margin:16px 0 28px">Déjanos tu teléfono y te llamamos cuando mejor te vaya. La contratación se hace por teléfono, en 15 minutos.</p>
+        <div class="stack small">
+          <div class="row"><div class="ico sm">1</div>Nos dejas tus datos</div>
+          <div class="row"><div class="ico sm">2</div>Te llamamos en menos de 24 h</div>
+          <div class="row"><div class="ico sm">3</div>Contratas por teléfono, si te encaja</div>
+        </div>
+        <p style="margin-top:28px">¿Prefieres llamar tú? <b>900 82 88 99</b></p>
+      </div>
+      <div class="card" style="padding:32px">
+        <div class="grid g2" style="gap:16px">
+          <label class="field">Nombre<span class="input">Tu nombre</span></label>
+          <label class="field">Teléfono<span class="input">600 000 000</span></label>
+          <label class="field">Me interesa<span class="input">Selecciona ▾</span></label>
+          <label class="field">¿Cuándo te llamamos?<span class="input">Mañana · Tarde ▾</span></label>
+        </div>
+        <div class="stack" style="margin:20px 0 24px">
+          <span class="check"><i></i>Acepto la política de privacidad</span>
+          <span class="check"><i></i>Quiero recibir novedades y ventajas para mutualistas</span>
+        </div>
+        <a class="btn primary" style="width:100%;justify-content:center">Quiero que me llaméis</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="cols">
+      <div><div class="logo" style="margin-bottom:16px">LOGO</div><p>Mutual Médica · La mutualidad de los médicos<br>☎ 900 82 88 99</p></div>
+      <div><h5>Productos</h5><ul><li>Ahorro</li><li>Inversión</li><li>Protección</li><li>Financiación</li></ul></div>
+      <div><h5>Tu momento</h5><ul><li>Empiezo mi carrera</li><li>Construyo mi vida</li><li>Hago crecer mi patrimonio</li><li>Preparo mi jubilación</li></ul></div>
+      <div><h5>Herramientas</h5><ul><li>Simuladores</li><li>Recomendador</li><li>Glosario</li><li>Guías</li></ul></div>
+      <div><h5>Mutualistas</h5><ul><li>Gestión de prestaciones</li><li>Área mutualista</li><li>¿Te ayudamos?</li></ul></div>
+    </div>
+    <div class="row" style="justify-content:space-between;border-top:1px solid var(--line);padding-top:20px"><span>© Mutual Médica</span><span>Aviso legal · Privacidad · Cookies · Accesibilidad</span></div>
+  </footer>
+
+  <div class="fab" style="top:560px">
+    <span class="n" style="left:-34px;top:10px">13</span>
+    <span class="pill">☎ Te llamamos</span>
+    <span class="pill light">? Ayuda</span>
+  </div>
+</main>
+
+<aside class="notes-panel" aria-label="Anotaciones UX">
+  <h4>Anotaciones · Home</h4>
+  <ol>
+    <li><b>Nueva marca paraguas.</b> "Portal de jubilación" pasa a "Futuro del Médico": habla a los 30 y a los 60, no solo al jubilado.</li>
+    <li><b>Se mantienen</b> "Gestión de prestaciones" y "Área mutualista", como pide el cliente, destacadas a la derecha como accesos de servicio.</li>
+    <li><b>Hero orientado a conversión.</b> Propuesta de valor emocional, CTA principal hacia el recomendador (poca fricción) y CTA secundario directo a lead.</li>
+    <li><b>Dato tangible</b> que engancha y lleva a la calculadora: da confianza con un número real.</li>
+    <li><b>Navegación por momento vital.</b> Resuelve la segmentación 30–40 / 50+ que pide el brief sin obligar a entender las categorías financieras.</li>
+    <li><b>Las 4 categorías</b> con los productos visibles: acceso directo para quien ya sabe lo que busca.</li>
+    <li><b>Recomendador en 3 preguntas.</b> Ayuda al usuario no experto y genera leads cualificados (producto de interés ya informado).</li>
+    <li><b>Calculadora funcional</b> en home: microconversión clave y enganche emocional. Interés 2,20&nbsp;% visible.</li>
+    <li><b>Pensumo</b> como incentivo informativo en el momento de decisión.</li>
+    <li><b>Contenido educativo</b> y glosario: capacita al target joven y trabaja el SEO.</li>
+    <li><b>Prueba social</b> de médicos de ambos segmentos de edad.</li>
+    <li><b>Formulario corto</b> (4 campos) y proceso explicado en 3 pasos: reduce la incertidumbre de la venta telefónica.</li>
+    <li><b>CTA flotante persistente</b> "Te llamamos" y ayuda contextual en toda la navegación.</li>
+  </ol>
+</aside>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

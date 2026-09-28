@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Caso práctico UX/UI · Mutual Médica · Jenifer Jaldo</title>
+<meta name="description" content="Rediseño del portal de jubilación del médico de Mutual Médica: fases, estrategia, wireframes y diseño UI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#0F79BB; --navy:#003A63; --ink:#0E2233; --ink-2:#44576A; --ink-3:#5E7082;
+  --sky:#F0F6FC; --sky-2:#E1EDF8; --line:#D6E2EE; --bg:#E9EEF3;
+  --head:"Manrope",system-ui,sans-serif; --body:"Open Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+body{font-family:var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* navegación de la presentación */
+.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:20;display:flex;gap:4px;padding:6px;border-radius:999px;background:rgba(0,58,99,.92);backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(0,30,60,.3);font-size:14px}
+.dock a{padding:8px 14px;border-radius:999px;color:#C9DCEC;font-weight:600;white-space:nowrap}
+.dock a:hover,.dock a.on{background:#fff;color:var(--navy)}
+
+/* diapositiva 16:9 escalable (unidades cqw) */
+.deck{display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 24px 120px}
+.slide{width:min(1400px,100%);aspect-ratio:16/9;background:#fff;border-radius:18px;box-shadow:0 20px 60px -30px rgba(0,30,60,.4);container-type:inline-size;position:relative;overflow:hidden;scroll-snap-align:center}
+.s{position:absolute;inset:0;padding:4.2cqw 5cqw;display:flex;flex-direction:column}
+.s h1,.s h2,.s h3,.s h4{font-family:var(--head);color:var(--navy);letter-spacing:-.02em;line-height:1.08}
+.kicker{font-size:1.05cqw;font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9cqw;display:flex;align-items:center;gap:.8cqw}
+.kicker::before{content:"";width:1.6cqw;height:.16cqw;background:currentColor}
+.s h2{font-size:3.1cqw;font-weight:800}
+.sub{font-size:1.3cqw;color:var(--ink-2);margin-top:.8cqw;max-width:60cqw;line-height:1.5}
+.foot{position:absolute;left:5cqw;right:5cqw;bottom:2.2cqw;display:flex;justify-content:space-between;font-size:.95cqw;color:var(--ink-3)}
+.foot b{color:var(--navy)}
+
+/* portada */
+.cover{background:var(--navy);color:#fff}
+.cover .s{justify-content:center}
+.cover::before{content:"";position:absolute;right:-12cqw;top:-14cqw;width:52cqw;height:52cqw;border-radius:50%;border:7cqw solid rgba(15,121,187,.35)}
+.cover::after{content:"";position:absolute;right:14cqw;bottom:-20cqw;width:30cqw;height:30cqw;border-radius:50%;background:radial-gradient(circle,rgba(15,121,187,.6),transparent 70%)}
+.cover img{height:4.6cqw;width:auto;align-self:flex-start;margin-bottom:4.5cqw;position:relative}
+.cover h1{font-size:6.2cqw;color:#fff;font-weight:800;max-width:62cqw;position:relative}
+.cover h1 em{font-style:normal;color:#7FBCE4}
+.cover p{font-size:1.6cqw;color:#C9DCEC;margin-top:2cqw;max-width:52cqw;line-height:1.5;position:relative}
+.cover .meta{display:flex;gap:3cqw;margin-top:5cqw;font-size:1.1cqw;color:#9DBBD3;position:relative}
+.cover .meta b{display:block;color:#fff;font-size:1.3cqw;font-family:var(--head)}
+.cover .foot{color:#9DBBD3}
+
+/* índice */
+.toc{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6cqw;margin-top:auto;margin-bottom:3cqw}
+.toc a{border:1px solid var(--line);border-radius:1.4cqw;padding:2cqw;display:flex;flex-direction:column;gap:.8cqw;transition:border-color .2s,transform .2s}
+.toc a:hover{border-color:var(--accent);transform:translateY(-.3cqw)}
+.toc .n{font-family:var(--head);font-size:3.4cqw;font-weight:800;color:var(--accent);line-height:1}
+.toc h4{font-size:1.5cqw}
+.toc p{font-size:1.05cqw;color:var(--ink-3);line-height:1.45}
+
+/* estrategia */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw;margin-top:2.6cqw;flex:1;min-height:0}
+.box{border:1px solid var(--line);border-radius:1.4cqw;padding:2cqw 2.2cqw}
+.box.sky{background:var(--sky);border-color:var(--sky)}
+.box.navy{background:var(--navy);border-color:var(--navy);color:#fff}
+.box.navy h3,.box.navy h4{color:#fff}
+.box h3{font-size:1.7cqw;margin-bottom:1.1cqw}
+.box h4{font-size:1.25cqw;margin-bottom:.4cqw}
+.box p,.box li{font-size:1.1cqw;line-height:1.5;color:var(--ink-2)}
+.box.navy p,.box.navy li{color:#C9DCEC}
+.box ul{list-style:none;display:grid;gap:.55cqw}
+.box li{padding-left:1.5cqw;position:relative}
+.box li::before{content:"";position:absolute;left:0;top:.62cqw;width:.6cqw;height:.6cqw;border-radius:50%;background:var(--accent)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:1.6cqw}
+.persona{display:flex;gap:1.2cqw;align-items:flex-start}
+.persona .av{width:4.2cqw;height:4.2cqw;border-radius:50%;background-size:cover;background-position:center;flex:none}
+.persona b{font-family:var(--head);color:var(--navy);font-size:1.3cqw;display:block}
+.persona span{font-size:1cqw;color:var(--accent);font-weight:600}
+.vp{font-family:var(--head);font-weight:700;font-size:1.9cqw;line-height:1.3;color:#fff;letter-spacing:-.01em}
+.vp em{font-style:normal;color:#7FBCE4}
+.princ{display:grid;grid-template-columns:repeat(5,1fr);gap:1cqw;margin-top:1.6cqw}
+.princ div{background:rgba(255,255,255,.08);border-radius:1cqw;padding:1.2cqw}
+.princ b{display:block;font-family:var(--head);font-size:1.8cqw;color:#7FBCE4;line-height:1;margin-bottom:.6cqw}
+.princ p{font-size:1cqw!important;line-height:1.4!important}
+
+/* arquitectura */
+.tree{display:grid;grid-template-columns:repeat(6,1fr);gap:.8cqw;position:relative;margin-top:1.6cqw}
+.tree .root{grid-column:1/-1;justify-self:center;background:var(--navy);color:#fff;font-family:var(--head);font-weight:700;font-size:1.2cqw;padding:.9cqw 2cqw;border-radius:999px;margin-bottom:1.6cqw;position:relative}
+.tree .root::after{content:"";position:absolute;left:50%;top:100%;height:1.6cqw;width:1px;background:var(--line)}
+.node{border-top:1px solid var(--line);padding-top:1.2cqw;position:relative}
+.node::before{content:"";position:absolute;left:50%;top:0;height:1.2cqw;width:1px;background:var(--line)}
+.node h4{font-size:1.1cqw;text-align:center;background:var(--sky);border-radius:.8cqw;padding:.7cqw .4cqw;margin-bottom:.7cqw;color:var(--navy)}
+.node.keep h4{background:#fff;border:1.5px dashed var(--accent)}
+.node ul{list-style:none;display:grid;gap:.35cqw}
+.node li{font-size:.92cqw;color:var(--ink-2);text-align:center;line-height:1.35}
+.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:.6cqw;margin-top:auto}
+.funnel div{background:var(--sky);padding:1.3cqw 1.2cqw;position:relative;clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%)}
+.funnel div:first-child{clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%);border-radius:1cqw 0 0 1cqw}
+.funnel div:nth-child(4){background:var(--accent)}
+.funnel div:nth-child(5){background:var(--navy)}
+.funnel div:nth-child(n+4) b,.funnel div:nth-child(n+4) p{color:#fff}
+.funnel b{font-family:var(--head);font-size:1.2cqw;color:var(--navy);display:block;padding-left:1.2cqw}
+.funnel p{font-size:.92cqw;color:var(--ink-2);padding-left:1.2cqw;line-height:1.35;margin-top:.3cqw}
+
+/* fases */
+.phases{display:grid;grid-template-columns:repeat(6,1fr);gap:.9cqw;margin-top:1.8cqw;margin-bottom:2.4cqw;flex:1;min-height:0}
+.ph{border-radius:1.2cqw;padding:1.2cqw 1.15cqw;background:var(--sky);display:flex;flex-direction:column;gap:.7cqw;position:relative}
+.ph .num{font-family:var(--head);font-weight:800;font-size:2cqw;color:var(--accent);line-height:1}
+.ph h4{font-size:1.3cqw;line-height:1.15}
+.ph .wk{font-size:.9cqw;font-weight:700;color:var(--accent);background:#fff;border-radius:999px;padding:.25cqw .7cqw;align-self:flex-start}
+.ph ul{list-style:none;display:grid;gap:.35cqw}
+.ph li{font-size:.86cqw;line-height:1.32;color:var(--ink-2);padding-left:.9cqw;position:relative}
+.ph li::before{content:"";position:absolute;left:0;top:.52cqw;width:.35cqw;height:.35cqw;border-radius:50%;background:var(--accent)}
+.ph .out{margin-top:auto;font-size:.88cqw;color:var(--navy);font-weight:600;border-top:1px solid var(--line);padding-top:.7cqw;line-height:1.35}
+.ph .out span{display:block;font-size:.8cqw;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.ph:nth-child(4){background:var(--navy)}
+.ph:nth-child(4) h4,.ph:nth-child(4) .out{color:#fff}
+.ph:nth-child(4) li,.ph:nth-child(4) .out span{color:#C9DCEC}
+.ph:nth-child(4) .num{color:#7FBCE4}
+.ph:nth-child(4) .out{border-color:rgba(255,255,255,.2)}
+.dd{display:flex;gap:1cqw;align-items:center;margin-top:1.2cqw;font-size:.95cqw;color:var(--ink-3)}
+.dd i{flex:1;height:.25cqw;border-radius:1cqw;background:linear-gradient(90deg,var(--accent),var(--navy))}
+
+/* gantt */
+.gantt{margin-top:2cqw;display:grid;grid-template-columns:13cqw repeat(22,1fr);row-gap:.55cqw;align-items:center;font-size:.95cqw}
+.gantt .h{color:var(--ink-3);font-size:.8cqw;text-align:center}
+.gantt .lbl{font-weight:600;color:var(--navy)}
+.gantt .bar{height:1.7cqw;border-radius:999px;background:var(--accent);color:#fff;font-size:.78cqw;font-weight:700;display:flex;align-items:center;padding:0 .8cqw;white-space:nowrap;overflow:hidden}
+.gantt .bar.n{background:var(--navy)}.gantt .bar.l{background:var(--sky-2);color:var(--navy)}
+.gantt .ms{grid-row:span 1;justify-self:center;width:1.1cqw;height:1.1cqw;background:var(--navy);transform:rotate(45deg);border-radius:.15cqw}
+.g3{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1.6cqw;margin-top:auto;margin-bottom:2cqw}
+.g3 .box{padding:1.5cqw 1.8cqw}
+.g3 .box h3{font-size:1.35cqw;margin-bottom:.8cqw}
+.g3 li,.g3 p{font-size:.98cqw!important}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:.6cqw}
+.kpis div{background:#fff;border-radius:.8cqw;padding:.7cqw .9cqw;font-size:.92cqw;color:var(--ink-2);line-height:1.3}
+.kpis b{display:block;font-family:var(--head);color:var(--accent);font-size:1.25cqw}
+
+/* entregables */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw;margin-top:2.6cqw}
+.shot{display:flex;flex-direction:column;gap:1cqw;transition:transform .2s}
+.shot:hover{transform:translateY(-.4cqw)}
+.shot .frame{border-radius:1.2cqw;overflow:hidden;border:1px solid var(--line);aspect-ratio:1440/1000;background:var(--sky)}
+.shot .frame img{width:100%;height:100%;object-fit:cover;object-position:top}
+.shot b{font-family:var(--head);font-size:1.4cqw;color:var(--navy)}
+.shot span{font-size:1.05cqw;color:var(--ink-3)}
+.cta{display:inline-flex;align-items:center;gap:.8cqw;background:var(--accent);color:#fff;font-weight:700;font-size:1.2cqw;padding:1cqw 2cqw;border-radius:999px;align-self:flex-start}
+.ui-slide{display:grid;grid-template-columns:.8fr 1.2fr;gap:3.2cqw;flex:1;min-height:0;margin-top:2cqw}
+.ui-slide .frame{border-radius:1.4cqw;overflow:hidden;box-shadow:0 2cqw 4cqw -2cqw rgba(0,30,60,.45);border:1px solid var(--line)}
+.ui-slide .frame img{width:100%;height:100%;object-fit:cover;object-position:top}
+.decisions{display:grid;gap:1cqw;align-content:start}
+.decisions>div{display:flex;gap:1.2cqw}
+.decisions b{font-family:var(--head);color:var(--navy);font-size:1.2cqw;display:block}
+.decisions p{font-size:1.02cqw;color:var(--ink-2);line-height:1.45}
+.decisions .cta{justify-self:start}
+.decisions i{width:2.4cqw;height:2.4cqw;border-radius:.7cqw;background:var(--sky);flex:none;display:grid;place-items:center;color:var(--accent);font-style:normal;font-weight:800;font-family:var(--head);font-size:1.1cqw}
+.swatches{display:flex;gap:.8cqw;margin-top:.4cqw}
+.swatches span{display:flex;flex-direction:column;gap:.3cqw;font-size:.8cqw;color:var(--ink-3)}
+.swatches span::before{content:"";width:3.4cqw;height:2.2cqw;border-radius:.5cqw;background:var(--c);border:1px solid var(--line)}
+
+@media (max-width:700px){.dock{font-size:12px}.dock a{padding:6px 9px}.deck{padding:16px 8px 90px;gap:16px}}
+@media print{
+  @page{size:1400px 787.5px;margin:0}
+  body{background:#fff}.dock{display:none}.deck{padding:0;gap:0}
+  .slide{width:1400px;border-radius:0;box-shadow:none;break-after:page}
+}
+</style>
+</head>
+<body>
+
+<nav class="dock" aria-label="Secciones">
+  <a href="#portada">Inicio</a>
+  <a href="#estrategia">Estrategia</a>
+  <a href="#fases">1 · Fases</a>
+  <a href="#wireframes">2 · Wireframes</a>
+  <a href="#ui">3 · Diseño UI</a>
+</nav>
+
+<div class="deck">
+
+  <!-- PORTADA -->
+  <section class="slide cover" id="portada">
+    <div class="s">
+      <img src="assets/logo-mutual-medica-blanco.png" alt="Mutual Médica">
+      <h1>Del portal del jubilado al <em>Futuro del Médico</em>.</h1>
+      <p>Nueva propuesta de valor, experiencia y diseño para captar y capacitar a médicos de 30 a 65 años, con foco en la conversión.</p>
+      <div class="meta">
+        <div><b>Caso práctico</b>Senior UX/UI · Product Builder</div>
+        <div><b>Jenifer Jaldo</b>UX/UI Designer</div>
+        <div><b>Septiembre 2026</b>Versión desktop</div>
+      </div>
+    </div>
+    <div class="foot"><span>Mutual Médica · Portal de jubilación del médico</span><span>01</span></div>
+  </section>
+
+  <!-- ÍNDICE -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">Contenido</p>
+      <h2>Qué vamos a ver</h2>
+      <p class="sub">El reto pide pasar de un portal informativo y estático, pensado para el jubilado, a una herramienta que acompañe al médico durante toda su carrera y genere negocio.</p>
+      <div class="toc">
+        <a href="#estrategia"><span class="n">00</span><h4>Estrategia</h4><p>Reto, target, propuesta de valor y arquitectura.</p></a>
+        <a href="#fases"><span class="n">01</span><h4>Fases del proyecto</h4><p>Del research al desarrollo, con los puntos clave de cada fase.</p></a>
+        <a href="#wireframes"><span class="n">02</span><h4>Wireframes</h4><p>Home, categoría Ahorro y Seguro de Ahorro Garantizado.</p></a>
+        <a href="#ui"><span class="n">03</span><h4>Diseño UI</h4><p>Home con el look&amp;feel evolucionado de la marca.</p></a>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>02</span></div>
+  </section>
+
+  <!-- ESTRATEGIA 1 -->
+  <section class="slide" id="estrategia">
+    <div class="s">
+      <p class="kicker">00 · Estrategia</p>
+      <h2>Un portal para toda la carrera, no solo para el final.</h2>
+      <div class="cols2">
+        <div style="display:grid;gap:1.6cqw;align-content:start">
+          <div class="box">
+            <h3>El punto de partida</h3>
+            <div class="vs">
+              <ul>
+                <li>Nombre y mensajes centrados en la jubilación: el médico de 30 años no se siente interpelado.</li>
+                <li>Portal estático e informativo, organizado por producto.</li>
+              </ul>
+              <ul>
+                <li>Pocas herramientas de implicación y CTAs genéricos.</li>
+                <li>Lenguaje financiero para un público que no es experto.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="box sky">
+            <h3>A quién hablamos</h3>
+            <div class="vs">
+              <div class="persona"><span class="av" style="background-image:url(assets/foto-jovenes.jpg);background-position:47% 22%;background-size:320%"></span><div><b>Laura, 32 · Adjunta</b><span>30–45 años</span><p style="margin-top:.4cqw">Empieza a ganar estabilidad. Quiere ahorrar, financiar proyectos y proteger a su familia. Poco tiempo y cero tecnicismos.</p></div></div>
+              <div class="persona"><span class="av" style="background-image:url(assets/foto-senior.jpg);background-position:74% 18%;background-size:320%"></span><div><b>Carmen, 58 · Médica de familia</b><span>+50 años</span><p style="margin-top:.4cqw">Quiere maximizar su ahorro para la jubilación, protegerse y cuidar de los suyos. Busca confianza y hablar con alguien.</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="box navy" style="display:flex;flex-direction:column">
+          <p class="kicker" style="color:#7FBCE4">Propuesta de valor</p>
+          <p class="vp">"Futuro del Médico" acompaña a cada médico en <em>cada etapa de su carrera</em> para que tome decisiones sobre su dinero con la misma tranquilidad con la que cuida de sus pacientes.</p>
+          <p style="margin-top:1.4cqw">Evolución de "Portal de jubilación del médico" a una marca paraguas que habla a los 30 y a los 60, bajo el respaldo de Mutual Médica.</p>
+          <div class="princ" style="margin-top:auto">
+            <div><b>1</b><p>Por momento vital, no por producto</p></div>
+            <div><b>2</b><p>Claridad antes que tecnicismo</p></div>
+            <div><b>3</b><p>Herramientas que implican</p></div>
+            <div><b>4</b><p>Conversión con contexto</p></div>
+            <div><b>5</b><p>Siempre a un clic de una persona</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>03</span></div>
+  </section>
+
+  <!-- ESTRATEGIA 2 -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">00 · Estrategia</p>
+      <h2>Arquitectura y embudo de conversión</h2>
+      <p class="sub">Doble entrada: por necesidad (producto) o por momento vital. Las herramientas llevan al usuario del interés a la llamada.</p>
+      <div class="tree">
+        <div class="root">Futuro del Médico · Home</div>
+        <div class="node"><h4>Productos</h4><ul><li>Ahorro</li><li>Inversión</li><li>Protección</li><li>Financiación</li><li class="muted">→ 10 fichas de producto</li></ul></div>
+        <div class="node"><h4>Tu momento</h4><ul><li>Empiezo mi carrera</li><li>Construyo mi vida</li><li>Hago crecer mi patrimonio</li><li>Preparo mi jubilación</li></ul></div>
+        <div class="node"><h4>Simuladores</h4><ul><li>Simulador de ahorro</li><li>Simulador de jubilación</li><li>Recomendador</li></ul></div>
+        <div class="node"><h4>Aprende</h4><ul><li>Guías</li><li>Vídeos</li><li>Glosario A–Z</li></ul></div>
+        <div class="node keep"><h4>Gestión de prestaciones</h4><ul><li>Se mantiene</li></ul></div>
+        <div class="node keep"><h4>Área mutualista</h4><ul><li>Se mantiene</li></ul></div>
+      </div>
+      <div class="funnel">
+        <div><b>Descubrir</b><p>SEO, contenidos, campañas por etapa</p></div>
+        <div><b>Entender</b><p>Tu momento, categorías, guías y glosario</p></div>
+        <div><b>Evaluar</b><p>Simulador, comparativa y recomendador</p></div>
+        <div><b>Convertir</b><p>"Te llamamos" con la simulación adjunta</p></div>
+        <div><b>Contratar</b><p>Llamada de un asesor en menos de 24 h</p></div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>04</span></div>
+  </section>
+
+  <!-- FASES 1 -->
+  <section class="slide" id="fases">
+    <div class="s">
+      <p class="kicker">01 · Fases del proyecto</p>
+      <h2>Seis fases, del research al desarrollo</h2>
+      <div class="phases">
+        <div class="ph"><span class="num">01</span><h4>Discovery y research</h4><span class="wk">Sem. 1–4</span>
+          <ul><li>Kick-off con negocio, marketing, call center y legal</li><li>Auditoría de analítica, embudo y formularios</li><li>Evaluación heurística y de accesibilidad</li><li>Benchmark: aseguradoras, neobancos, roboadvisors</li><li>Entrevistas a médicos de ambos segmentos y encuesta</li><li>Dudas reales del call center</li></ul>
+          <p class="out"><span>Entregable</span>Informe de insights y oportunidades</p></div>
+        <div class="ph"><span class="num">02</span><h4>Definición y estrategia</h4><span class="wk">Sem. 4–7</span>
+          <ul><li>Proto-personas y customer journey por momento vital</li><li>Propuesta de valor y posicionamiento</li><li>Arquitectura de información: card sorting y tree testing</li><li>KPIs y plan de medición</li><li>Roadmap y alcance del MVP (MoSCoW)</li></ul>
+          <p class="out"><span>Entregable</span>Estrategia, sitemap y roadmap</p></div>
+        <div class="ph"><span class="num">03</span><h4>Ideación y diseño UX</h4><span class="wk">Sem. 7–11</span>
+          <ul><li>User flows: recomendador, simulador y captación de lead</li><li>Wireframes lo-fi → mid-fi</li><li>UX writing en lenguaje claro y glosario</li><li>Prototipo navegable</li><li>2 rondas de test de usabilidad (6–8 médicos) e iteración</li></ul>
+          <p class="out"><span>Entregable</span>Prototipo validado con usuarios</p></div>
+        <div class="ph"><span class="num">04</span><h4>Diseño UI y design system</h4><span class="wk">Sem. 10–14</span>
+          <ul><li>Evolución de marca: moodboard y style tiles</li><li>Design system en Figma: tokens, componentes y estados</li><li>Diseño hi-fi desktop y mobile</li><li>Accesibilidad AA: contraste, foco, tamaños</li><li>Preference test y handoff (Dev Mode, specs)</li></ul>
+          <p class="out"><span>Entregable</span>UI final + librería de componentes</p></div>
+        <div class="ph"><span class="num">05</span><h4>Desarrollo y QA</h4><span class="wk">Sem. 13–20</span>
+          <ul><li>Sprints de 2 semanas con diseño en el equipo</li><li>Componentes en el CMS actual (Liferay)</li><li>Leads integrados con CRM y call center</li><li>Etiquetado de eventos (GA4) y SEO</li><li>QA funcional, accesibilidad, rendimiento y RGPD</li></ul>
+          <p class="out"><span>Entregable</span>Portal en producción</p></div>
+        <div class="ph"><span class="num">06</span><h4>Lanzamiento y optimización</h4><span class="wk">Sem. 20+</span>
+          <ul><li>Lanzamiento progresivo y monitorización</li><li>Dashboard de conversión por etapa</li><li>A/B tests: hero, CTAs y formularios</li><li>Heatmaps y feedback del call center</li><li>Evolutivos: área personal, contratación online</li></ul>
+          <p class="out"><span>Entregable</span>Mejora continua (CRO)</p></div>
+      </div>
+      
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>05</span></div>
+  </section>
+
+  <!-- FASES 2 -->
+  <section class="slide">
+    <div class="s">
+      <p class="kicker">01 · Fases del proyecto</p>
+      <h2>Planificación, equipo y cómo medimos el éxito</h2>
+      <div class="gantt" aria-label="Cronograma de 22 semanas">
+        <span></span>
+        <span class="h">1</span><span class="h">2</span><span class="h">3</span><span class="h">4</span><span class="h">5</span><span class="h">6</span><span class="h">7</span><span class="h">8</span><span class="h">9</span><span class="h">10</span><span class="h">11</span><span class="h">12</span><span class="h">13</span><span class="h">14</span><span class="h">15</span><span class="h">16</span><span class="h">17</span><span class="h">18</span><span class="h">19</span><span class="h">20</span><span class="h">21</span><span class="h">22</span>
+        <span class="lbl">01 Discovery</span><span class="bar" style="grid-column:2/6">Research</span><span style="grid-column:6/-1"></span>
+        <span class="lbl">02 Definición</span><span style="grid-column:2/5"></span><span class="bar" style="grid-column:5/9">Estrategia · Arquitectura</span><span style="grid-column:9/-1"></span>
+        <span class="lbl">03 Diseño UX</span><span style="grid-column:2/8"></span><span class="bar" style="grid-column:8/13">Wireframes · Test</span><span style="grid-column:13/-1"></span>
+        <span class="lbl">04 Diseño UI</span><span style="grid-column:2/11"></span><span class="bar n" style="grid-column:11/16">UI · Design system</span><span style="grid-column:16/-1"></span>
+        <span class="lbl">05 Desarrollo</span><span style="grid-column:2/14"></span><span class="bar" style="grid-column:14/22">Sprints · QA</span><span style="grid-column:22/-1"></span>
+        <span class="lbl">06 Lanzamiento</span><span style="grid-column:2/22"></span><span class="bar l" style="grid-column:22/24">Go-live →</span>
+      </div>
+      <div class="g3">
+        <div class="box sky">
+          <h3>Cómo trabajamos</h3>
+          <ul>
+            <li>Double Diamond para el diseño + Scrum para el desarrollo</li>
+            <li>Validación con médicos reales en cada fase</li>
+            <li>Diseño y desarrollo solapados para ganar tiempo</li>
+            <li>Revisión legal y de compliance continua</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Equipo</h3>
+          <ul>
+            <li>Product Owner (Mutual Médica) y Project Manager</li>
+            <li>UX Researcher · Senior UX/UI Designer · UX Writer</li>
+            <li>Front-end, back-end y QA</li>
+            <li>Analista de datos / CRO y SEO</li>
+          </ul>
+        </div>
+        <div class="box sky">
+          <h3>KPIs de éxito</h3>
+          <div class="kpis">
+            <div><b>↑ Leads</b>Tasa de conversión a solicitud de llamada</div>
+            <div><b>↑ Cualificación</b>% de leads con producto y simulación</div>
+            <div><b>↑ 30–45 años</b>Peso del nuevo target en el tráfico y en los leads</div>
+            <div><b>↑ Contratación</b>Ratio lead → póliza firmada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>06</span></div>
+  </section>
+
+  <!-- WIREFRAMES -->
+  <section class="slide" id="wireframes">
+    <div class="s">
+      <p class="kicker">02 · Wireframes desktop</p>
+      <h2>Tres pantallas clave del recorrido</h2>
+      <p class="sub">Navegables e interactivos: las calculadoras funcionan y el botón "Anotaciones UX" muestra el porqué de cada decisión.</p>
+      <div class="shots">
+        <a class="shot" href="wireframes/home.html"><div class="frame"><img src="assets/shots/wf-home.jpg" alt="Wireframe de la home" loading="lazy"></div><b>Home</b><span>Propuesta de valor, momento vital, recomendador y simulador</span></a>
+        <a class="shot" href="wireframes/ahorro.html"><div class="frame"><img src="assets/shots/wf-ahorro.jpg" alt="Wireframe de la categoría Ahorro" loading="lazy"></div><b>Categoría · Ahorro</b><span>Selector por meta, tarjetas comparables y comparativa</span></a>
+        <a class="shot" href="wireframes/seguro-ahorro-garantizado.html"><div class="frame"><img src="assets/shots/wf-producto.jpg" alt="Wireframe del Seguro de Ahorro Garantizado" loading="lazy"></div><b>Producto · Ahorro Garantizado</b><span>Calculadora al 2,20&nbsp;% y formulario con contexto</span></a>
+      </div>
+      <a class="cta" href="wireframes/home.html" style="margin-top:auto;margin-bottom:3cqw">Abrir los wireframes →</a>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>07</span></div>
+  </section>
+
+  <!-- UI -->
+  <section class="slide" id="ui">
+    <div class="s">
+      <p class="kicker">03 · Diseño UI · Home</p>
+      <h2>La misma marca, con otra energía</h2>
+      <div class="ui-slide">
+        <div class="decisions">
+          <div><i>1</i><div><b>Azul de marca como acento único</b><p>El azul exacto del logo para acciones y datos clave; el navy aporta solidez. Contraste AA.</p><div class="swatches"><span style="--c:#0F79BB">#0F79BB</span><span style="--c:#003A63">#003A63</span><span style="--c:#F0F6FC">#F0F6FC</span><span style="--c:#0E2233">#0E2233</span></div></div></div>
+          <div><i>2</i><div><b>Tipografía con más carácter</b><p>Manrope en titulares para un tono actual y cercano. Open Sans, la de la marca, en los textos.</p></div></div>
+          <div><i>3</i><div><b>Tendencias con propósito</b><p>Bento grid, tarjetas flotantes, esquinas amplias y microinteracciones que invitan a explorar.</p></div></div>
+          <div><i>4</i><div><b>Personas reales y datos tangibles</b><p>Fotografía de médicos jóvenes y cifras concretas (45.147&nbsp;€) en lugar de mensajes abstractos.</p></div></div>
+          <a class="cta" href="ui/home.html">Ver la home interactiva →</a>
+        </div>
+        <a class="frame" href="ui/home.html"><img src="assets/shots/ui-home.jpg" alt="Diseño UI de la home" loading="lazy"></a>
+      </div>
+    </div>
+    <div class="foot"><span><b>Mutual Médica</b> · Caso práctico UX/UI</span><span>08</span></div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="slide cover">
+    <div class="s">
+      <img src="assets/logo-mutual-medica-blanco.png" alt="Mutual Médica">
+      <h1>Gracias.</h1>
+      <p>Médicos cuidando de médicos, ahora también de su futuro financiero, desde el primer día de residencia.</p>
+      <div class="meta">
+        <div><b>Jenifer Jaldo</b>Senior UX/UI Designer</div>
+      </div>
+    </div>
+    <div class="foot"><span>Caso práctico UX/UI · Mutual Médica</span><span>09</span></div>
+  </section>
+</div>
+
+<script>
+// Resalta la sección activa en el dock
+const links=[...document.querySelectorAll('.dock a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{threshold:.55});
+document.querySelectorAll('.slide[id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>

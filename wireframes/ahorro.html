@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wireframe · Categoría Ahorro · Futuro del Médico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/wire.css">
+<style>
+  .crumbs{padding:20px 120px;font-size:var(--fs-xs);color:var(--ink-3)}
+  .subnav{position:sticky;top:44px;z-index:3;background:#fff;border-bottom:1px solid var(--line);height:56px;display:flex;align-items:center;gap:32px;padding:0 120px;font-weight:600;font-size:var(--fs-xs)}
+  .subnav a:first-child{border-bottom:2px solid var(--ink);padding:17px 0}
+  .chip{height:44px;padding:0 18px;border:1px solid var(--line);border-radius:999px;display:inline-flex;align-items:center;gap:8px;background:#fff;cursor:pointer}
+  .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .risk{display:flex;gap:4px}.risk i{width:22px;height:8px;border-radius:2px;background:var(--fill-3)}.risk i.on{background:var(--ink)}
+  .pcard{display:flex;flex-direction:column;gap:14px;padding:28px}
+  .pcard .kpi{display:flex;align-items:baseline;gap:8px;padding:16px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+  .pcard .kpi b{font-size:var(--fs-xxl);line-height:1;white-space:nowrap}
+  .pcard ul{list-style:none;font-size:var(--fs-xs);color:var(--ink-2)}
+  .pcard li{padding:5px 0}.pcard li::before{content:"✓  ";font-weight:700;color:var(--ink)}
+  .pcard.reco{border:2px solid var(--ink);position:relative}
+  .pcard.reco::before{content:"Recomendado para tu perfil";position:absolute;top:-14px;left:24px;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px}
+  table{width:100%;border-collapse:collapse;font-size:var(--fs-xs)}
+  th,td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line-2);vertical-align:top}
+  thead th{font-size:var(--fs-s);background:var(--fill)}
+  tbody th{font-weight:600;width:22%;color:var(--ink)}
+  td{color:var(--ink-2)}
+  td .risk{display:inline-flex;margin-right:8px}
+  .seg{display:inline-flex;background:var(--fill);border-radius:999px;padding:4px}
+  .seg span{padding:10px 20px;border-radius:999px;font-weight:600;font-size:var(--fs-xs);cursor:pointer}
+  .seg span.on{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+</style>
+</head>
+<body>
+
+<div class="deck-bar">
+  <a href="../index.html"><strong>Caso práctico · Mutual Médica</strong></a>
+  <span class="muted">Wireframes desktop 1440</span>
+  <nav>
+    <a href="home.html">1 · Home</a>
+    <a href="ahorro.html" aria-current="page">2 · Categoría Ahorro</a>
+    <a href="seguro-ahorro-garantizado.html">3 · Producto</a>
+  </nav>
+  <button data-toggle-notes aria-pressed="false">Anotaciones UX</button>
+</div>
+
+<main class="canvas">
+
+  <div class="topbar">
+    <div class="row"><span>Fundación</span><span>Web Mutual Médica</span><span>Actualidad</span></div>
+    <div class="row"><span>☎ 900 82 88 99 · L-V 8-20 h</span><span>ES ▾</span><span>⌕</span></div>
+  </div>
+  <header class="header">
+    <div class="logo">LOGO</div>
+    <nav class="menu">
+      <a style="text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px">Productos <span class="caret">▼</span></a>
+      <a>Tu momento <span class="caret">▼</span></a>
+      <a>Simuladores</a>
+      <a>Aprende</a>
+      <a>¿Te ayudamos?</a>
+    </nav>
+    <div class="keep"><a>Gestión de prestaciones</a><a class="dark">Área mutualista</a></div>
+  </header>
+
+  <div class="crumbs">Inicio  /  Productos  /  <b style="color:var(--ink)">Ahorro</b></div>
+
+  <!-- HERO CATEGORÍA -->
+  <section style="padding:32px 0 64px">
+    <span class="n" style="left:100px;top:20px">1</span>
+    <div class="wrap grid" style="grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
+      <div>
+        <p class="eyebrow">Productos de ahorro</p>
+        <h1>Ahorra para lo que de verdad te importa.</h1>
+        <p class="lead" style="margin:20px 0 32px">Interés garantizado, sin riesgo y con la flexibilidad de decidir cuándo y cómo cobrar. Empieza con lo que puedas.</p>
+        <div class="row"><a class="btn primary">Comparar productos ↓</a><a class="btn">Quiero que me llaméis</a></div>
+      </div>
+      <div class="card fill" style="padding:32px">
+        <span class="n" style="right:-12px;top:-12px">2</span>
+        <h4 style="margin-bottom:6px">¿Para qué quieres ahorrar?</h4>
+        <p class="small muted" style="margin-bottom:20px">Elige una meta y te enseñamos la mejor opción.</p>
+        <div class="row" style="flex-wrap:wrap;gap:10px">
+          <span class="chip">✈ Viajes y proyectos</span>
+          <span class="chip on">⌂ Vivienda o coche</span>
+          <span class="chip">☺ Estudios de mis hijos</span>
+          <span class="chip">◎ Un colchón por si acaso</span>
+          <span class="chip">☀ Complementar mi jubilación</span>
+        </div>
+        <div class="card" style="margin-top:20px;display:flex;gap:16px;align-items:center">
+          <div class="ico">◔</div>
+          <div style="flex:1"><p class="small muted">Para vivienda o coche te encaja</p><b>Seguro de Ahorro Garantizado</b></div>
+          <a class="link small">Ver →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="subnav">
+    <span class="n" style="left:100px;top:14px">3</span>
+    <a>Productos</a><a>Comparativa</a><a>Simulador</a><a>Ventaja Pensumo</a><a>Preguntas frecuentes</a>
+    <a class="btn primary sm" style="margin-left:auto">Te llamamos</a>
+  </nav>
+
+  <!-- PRODUCTOS -->
+  <section>
+    <span class="n" style="left:100px;top:60px">4</span>
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">3 formas de ahorrar</p><h2>Elige según tu forma de ser con el dinero</h2></div>
+        <div>
+          <p class="small muted" style="margin-bottom:8px">¿Cómo te sientes con el riesgo?</p>
+          <div class="seg"><span class="on">Prefiero seguridad</span><span>Algo de riesgo</span><span>Busco rentabilidad</span></div>
+        </div>
+      </div>
+      <div class="grid g3" style="align-items:stretch">
+        <article class="card pcard reco">
+          <div class="row" style="justify-content:space-between"><span class="tag">Aportaciones periódicas</span><div class="risk" title="Riesgo bajo"><i class="on"></i><i></i><i></i></div></div>
+          <h3>Seguro de Ahorro Garantizado</h3>
+          <p class="muted">Tu dinero crece mes a mes con un interés asegurado. Tú decides para qué.</p>
+          <div class="kpi"><b>2,20&nbsp;%</b><span class="small muted"><span class="gl" tabindex="0" data-tip="Rentabilidad anual antes de impuestos, asegurada por contrato.">interés bruto anual garantizado</span></span></div>
+          <ul><li>Cobra en capital o en renta mensual creciente</li><li>Cobertura en caso de fallecimiento</li><li>+ <span class="gl" tabindex="0" data-tip="Parte de los beneficios de la mutualidad que se suma a tu ahorro cada año.">participación en beneficios</span></li><li>1,70&nbsp;% para aportaciones únicas</li></ul>
+          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn primary sm">Ver producto</a><a class="link small">Simular</a></div>
+        </article>
+        <article class="card pcard">
+          <div class="row" style="justify-content:space-between"><span class="tag">Aportación única</span><div class="risk" title="Riesgo bajo"><i class="on"></i><i></i><i></i></div></div>
+          <h3>Seguro de Ahorro-Inversión</h3>
+          <p class="muted">Para ese dinero que tienes parado y quieres que rinda, sin sorpresas.</p>
+          <div class="kpi"><b>1,70&nbsp;%</b><span class="small muted">garantizado a vencimiento (2030)</span></div>
+          <ul><li>Desde 5.000 € hasta 100.000 €</li><li>Rescate disponible a partir del primer año</li><li>Cobertura en caso de fallecimiento</li><li>Contratación hasta los 65 años</li></ul>
+          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn sm">Ver producto</a><a class="link small">Te llamamos</a></div>
+        </article>
+        <article class="card pcard">
+          <div class="row" style="justify-content:space-between"><span class="tag">Inversión automatizada</span><div class="risk" title="Riesgo según tu perfil"><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+          <h3>Plan INbestMe</h3>
+          <p class="muted">Carteras de <span class="gl" tabindex="0" data-tip="Fondos que replican un índice de mercado, con comisiones bajas.">fondos indexados</span> y sostenibles, gestionadas por expertos. 100&nbsp;% online.</p>
+          <div class="kpi"><b>0 €</b><span class="small muted">comisión de gestión en tus primeros 15.000 €</span></div>
+          <ul><li>Cartera adaptada a tu perfil de riesgo</li><li>Aportaciones periódicas flexibles</li><li>Inversión socialmente responsable</li><li>También en productos de inversión</li></ul>
+          <div class="row" style="margin-top:auto;padding-top:8px"><a class="btn sm">Ver producto</a><a class="link small">Te llamamos</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section style="background:var(--fill)">
+    <span class="n" style="left:100px;top:60px">5</span>
+    <div class="wrap">
+      <div class="sec-head"><div><p class="eyebrow">Comparativa</p><h2>Diferencias, de un vistazo</h2></div><a class="link small">Descargar ficha PDF</a></div>
+      <div class="card" style="padding:0;overflow:hidden">
+        <table>
+          <thead><tr><th></th><th>Ahorro Garantizado</th><th>Ahorro-Inversión</th><th>Plan INbestMe</th></tr></thead>
+          <tbody>
+            <tr><th>Ideal si…</th><td>Quieres ahorrar poco a poco para una meta</td><td>Tienes ahorros parados y quieres rentabilidad segura</td><td>Buscas más rentabilidad a largo plazo</td></tr>
+            <tr><th>Cómo aportas</th><td>Mensual, trimestral o anual (y aportaciones extra)</td><td>Una única aportación</td><td>Periódica y flexible</td></tr>
+            <tr><th>Rentabilidad</th><td>2,20&nbsp;% garantizado + participación en beneficios</td><td>1,70&nbsp;% garantizado a vencimiento</td><td>Variable, según mercado</td></tr>
+            <tr><th>Riesgo</th><td><div class="risk"><i class="on"></i><i></i><i></i></div> Bajo</td><td><div class="risk"><i class="on"></i><i></i><i></i></div> Bajo</td><td><div class="risk"><i class="on"></i><i class="on"></i><i class="on"></i></div> Según perfil</td></tr>
+            <tr><th>Disponibilidad</th><td>Rescate a partir del primer año</td><td>Rescate a partir del primer año</td><td>Rescate a partir del primer año</td></tr>
+            <tr><th>Cómo cobras</th><td>Capital o renta</td><td>Capital a vencimiento</td><td>Capital</td></tr>
+            <tr><th>App Pensumo gratis</th><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><th></th><td><a class="btn primary sm">Ver producto</a></td><td><a class="btn sm">Ver producto</a></td><td><a class="btn sm">Ver producto</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR MINI -->
+  <section>
+    <span class="n" style="left:100px;top:60px">6</span>
+    <div class="wrap card row" style="padding:40px;gap:48px" data-calc>
+      <div style="flex:1.1">
+        <p class="eyebrow">Simulador rápido</p>
+        <h3 style="margin-bottom:24px">Si ahorras <span data-out="monthly"></span> al mes durante <span data-out="years"></span>…</h3>
+        <input type="range" name="monthly" min="30" max="1000" step="10" value="100" aria-label="Aportación mensual">
+        <div style="height:24px"></div>
+        <input type="range" name="years" min="1" max="40" value="15" aria-label="Años">
+      </div>
+      <div style="flex:.9;border-left:1px solid var(--line);padding-left:48px">
+        <p class="muted">tendrás aproximadamente</p>
+        <p data-out="total" style="font-size:var(--fs-xxl);font-weight:700;line-height:1.1"></p>
+        <p class="small muted" style="margin:8px 0 16px">con un 2,20&nbsp;% de interés garantizado · <span data-out="interest"></span> de intereses</p>
+        <a class="link">Simulación detallada →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENSUMO -->
+  <section style="padding:0 0 72px;border:0">
+    <span class="n" style="left:100px;top:-10px">7</span>
+    <div class="wrap card fill row" style="padding:32px 40px;gap:32px">
+      <div class="img" style="width:120px;height:120px;flex:none;border-radius:24px"><span>App</span></div>
+      <div style="flex:1"><span class="tag dark">Incluido gratis</span><h3 style="margin:10px 0 6px">Con cualquier producto de ahorro, Pensumo es tuyo.</h3><p class="muted">La app que redondea tus compras diarias y transfiere la diferencia a tu ahorro. Sin darte cuenta, sumas cada mes.</p></div>
+      <div class="stack small" style="width:220px"><div class="row"><div class="ico sm">☕</div>Café 2,60 € → 3 €</div><div class="row"><div class="ico sm">+</div>0,40 € a tu ahorro</div></div>
+    </div>
+  </section>
+
+  <!-- FAQ + AYUDA -->
+  <section style="border-top:1px dashed var(--line-2)">
+    <span class="n" style="left:100px;top:60px">8</span>
+    <div class="wrap grid" style="grid-template-columns:1.5fr 1fr;gap:64px">
+      <div>
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2 style="margin-bottom:16px">Lo que más nos preguntan</h2>
+        <details open><summary>¿Los seguros de ahorro desgravan en la renta?</summary><p>Las aportaciones no desgravan, pero los rendimientos solo tributan cuando los cobras, como rendimiento del capital mobiliario. Si buscas desgravar, te interesa el Plan de Previsión Asegurado.</p></details>
+        <details><summary>¿Puedo recuperar mi dinero cuando quiera?</summary><p>Sí, a partir del primer año puedes rescatar tu ahorro total o parcialmente.</p></details>
+        <details><summary>¿Qué es la participación en beneficios?</summary><p>Como mutualidad, no tenemos accionistas: parte de los beneficios se suman cada año a tu ahorro.</p></details>
+        <details><summary>¿Qué diferencia hay entre ahorro e inversión?</summary><p>El ahorro te garantiza un interés fijo y sin riesgo. La inversión busca más rentabilidad a largo plazo, pero el valor puede subir o bajar según el mercado.</p></details>
+      </div>
+      <div class="card fill stack" style="padding:32px;align-self:start">
+        <div class="ico">?</div>
+        <h3>¿Aún tienes dudas?</h3>
+        <p class="muted">Un asesor especializado en médicos te lo explica sin tecnicismos.</p>
+        <a class="btn primary" style="width:100%;justify-content:center">Quiero que me llaméis</a>
+        <p class="small" style="text-align:center">o llama gratis al <b>900 82 88 99</b></p>
+        <hr style="border:0;border-top:1px solid var(--line);margin:8px 0">
+        <a class="link small">Consultar el glosario financiero →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CROSS SELL -->
+  <section>
+    <span class="n" style="left:100px;top:60px">9</span>
+    <div class="wrap">
+      <p class="eyebrow">También te puede interesar</p>
+      <h2 style="margin-bottom:32px">Completa tu plan</h2>
+      <div class="grid g3">
+        <div class="card row" style="gap:20px"><div class="ico">↗</div><div style="flex:1"><h4>Inversión</h4><p class="small muted">Para hacer crecer tu patrimonio.</p></div><span>→</span></div>
+        <div class="card row" style="gap:20px"><div class="ico">◇</div><div style="flex:1"><h4>Seguro de Orfandad</h4><p class="small muted">Complementa tu ahorro y protege sus estudios.</p></div><span>→</span></div>
+        <div class="card row" style="gap:20px"><div class="ico">☀</div><div style="flex:1"><h4>Preparo mi jubilación</h4><p class="small muted">Todo para tu etapa +55.</p></div><span>→</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section id="contacto" style="background:var(--fill)">
+    <span class="n" style="left:100px;top:60px">10</span>
+    <div class="wrap grid" style="grid-template-columns:1fr 1.1fr;gap:64px;align-items:center">
+      <div><p class="eyebrow">Te llamamos</p><h2>¿Te ayudamos a elegir tu ahorro?</h2><p class="lead" style="margin-top:16px">Te llamamos en menos de 24 h. Sin compromiso.</p></div>
+      <div class="card" style="padding:32px">
+        <div class="grid g2" style="gap:16px">
+          <label class="field">Nombre<span class="input">Tu nombre</span></label>
+          <label class="field">Teléfono<span class="input">600 000 000</span></label>
+          <label class="field">Me interesa<span class="input" style="color:var(--ink)">Productos de ahorro ▾</span></label>
+          <label class="field">¿Cuándo te llamamos?<span class="input">Mañana · Tarde ▾</span></label>
+        </div>
+        <div class="stack" style="margin:20px 0 24px"><span class="check"><i></i>Acepto la política de privacidad</span></div>
+        <a class="btn primary" style="width:100%;justify-content:center">Quiero que me llaméis</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="cols">
+      <div><div class="logo" style="margin-bottom:16px">LOGO</div><p>Mutual Médica · La mutualidad de los médicos<br>☎ 900 82 88 99</p></div>
+      <div><h5>Productos</h5><ul><li>Ahorro</li><li>Inversión</li><li>Protección</li><li>Financiación</li></ul></div>
+      <div><h5>Tu momento</h5><ul><li>Empiezo mi carrera</li><li>Construyo mi vida</li><li>Hago crecer mi patrimonio</li><li>Preparo mi jubilación</li></ul></div>
+      <div><h5>Herramientas</h5><ul><li>Simuladores</li><li>Recomendador</li><li>Glosario</li><li>Guías</li></ul></div>
+      <div><h5>Mutualistas</h5><ul><li>Gestión de prestaciones</li><li>Área mutualista</li><li>¿Te ayudamos?</li></ul></div>
+    </div>
+    <div class="row" style="justify-content:space-between;border-top:1px solid var(--line);padding-top:20px"><span>© Mutual Médica</span><span>Aviso legal · Privacidad · Cookies · Accesibilidad</span></div>
+  </footer>
+</main>
+
+<aside class="notes-panel" aria-label="Anotaciones UX">
+  <h4>Anotaciones · Categoría Ahorro</h4>
+  <ol>
+    <li><b>Hero con beneficio claro</b> (garantía, sin riesgo, flexibilidad) y los dos CTA: explorar o pedir llamada.</li>
+    <li><b>Selector por meta.</b> El médico no piensa en "productos", piensa en "para qué". Se traduce su meta al producto recomendado.</li>
+    <li><b>Sub-navegación sticky</b> con anclas y CTA siempre visible: navegación ágil en una página larga.</li>
+    <li><b>Tarjetas comparables</b> con la misma estructura: tipo de aportación, indicador de riesgo, KPI principal y 4 beneficios. El filtro de riesgo destaca la recomendada.</li>
+    <li><b>Glosario contextual</b> (subrayado punteado): explica términos como "interés bruto" o "fondos indexados" sin salir de la página.</li>
+    <li><b>Tabla comparativa</b> en lenguaje llano. Resuelve la duda "¿cuál es para mí?", que es la mayor barrera en productos financieros.</li>
+    <li><b>Simulador rápido</b> como microconversión que lleva a la ficha de producto.</li>
+    <li><b>Pensumo</b> explicado con un ejemplo cotidiano: el beneficio se entiende en 2 segundos.</li>
+    <li><b>FAQ + ayuda humana:</b> objeciones resueltas y salida a asesor o teléfono.</li>
+    <li><b>Venta cruzada</b> lógica (Orfandad complementa el ahorro, como indica el producto actual) y <b>formulario preconfigurado</b> con la categoría, para un lead más cualificado.</li>
+  </ol>
+</aside>
+
+<script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Futuro del Médico · Mutual Médica</title>
+<meta name="description" content="Ahorro, inversión, protección y financiación para médicos, en cada etapa de su carrera.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Marca */
+  --accent:#0F79BB;           /* azul exacto del logo */
+  --navy:#003A63;             /* azul profundo de marca */
+  --navy-2:#004876;
+  --ink:#0E2233; --ink-2:#44576A; --ink-3:#5E7082;
+  --sky:#F0F6FC; --sky-2:#E1EDF8; --line:#D6E2EE; --white:#fff;
+  --ok:#1C7C54;
+  /* Tipografía fluida · 6 tamaños */
+  --fs-1:clamp(14px,.85vw,15px);
+  --fs-2:clamp(16px,1.05vw,17px);
+  --fs-3:clamp(19px,1.4vw,22px);
+  --fs-4:clamp(24px,2vw,30px);
+  --fs-5:clamp(32px,3.1vw,46px);
+  --fs-6:clamp(40px,4.6vw,68px);
+  --r-s:12px; --r:20px; --r-l:32px;
+  --shadow:0 20px 50px -20px rgba(0,58,99,.25);
+  --head:"Manrope",system-ui,sans-serif;
+  --body:"Open Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:var(--fs-2);line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--head);color:var(--navy);letter-spacing:-.02em;line-height:1.1}
+h1{font-size:var(--fs-6);font-weight:800}
+h2{font-size:var(--fs-5);font-weight:700}
+h3{font-size:var(--fs-4);font-weight:700;line-height:1.2}
+h4{font-size:var(--fs-3);font-weight:700;line-height:1.25}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-1);font-weight:600;color:var(--accent);letter-spacing:.02em;margin-bottom:14px}
+.eyebrow::before{content:"";width:18px;height:2px;background:currentColor;border-radius:2px}
+.lead{font-size:var(--fs-3);color:var(--ink-2);line-height:1.55}
+.muted{color:var(--ink-3)}
+.small{font-size:var(--fs-1)}
+.ico{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.hl{color:var(--accent)}
+
+/* Botones · finos y premium */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:var(--fs-2);border:1.5px solid transparent;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s,color .2s;white-space:nowrap}
+.btn .ico{width:18px;height:18px;transition:transform .2s}
+.btn:hover .ico{transform:translateX(3px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -10px rgba(15,121,187,.7)}
+.btn-primary:hover{background:var(--navy);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-ghost:hover{background:var(--navy);color:#fff}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-light:hover{background:var(--sky)}
+.btn-sm{height:42px;padding:0 18px;font-size:var(--fs-1)}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--accent)}
+.link .ico{width:16px;height:16px;transition:transform .2s}
+.link:hover .ico{transform:translateX(3px)}
+
+/* ── Header ── */
+.topbar{background:var(--navy);color:#CFE0EE;font-size:var(--fs-1)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px}
+.topbar nav{display:flex;gap:24px}
+.topbar a:hover{color:#fff}
+.topbar .tel{display:flex;align-items:center;gap:8px;color:#fff;font-weight:600}
+.topbar .tel .ico{width:15px;height:15px}
+header.main{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+header.main .wrap{display:flex;align-items:center;gap:32px;height:84px;width:min(1320px,100% - 48px)}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{height:44px;width:auto}
+.brand span{font-family:var(--head);font-weight:700;color:var(--navy);font-size:var(--fs-2);line-height:1.1;padding-left:14px;border-left:1px solid var(--line)}
+.brand span{white-space:nowrap}
+.menu{display:flex;gap:24px;font-weight:600;font-size:var(--fs-1);color:var(--ink);white-space:nowrap}
+.menu a{position:relative;padding:6px 0}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent);transform:scaleX(0);transition:transform .2s;transform-origin:left}
+.menu a:hover::after{transform:scaleX(1)}
+.keep{margin-left:auto;display:flex;gap:10px}
+.keep a{display:flex;align-items:center;gap:8px;height:42px;padding:0 16px;border-radius:999px;font-size:var(--fs-1);font-weight:600;white-space:nowrap}
+.keep .k1{background:var(--sky);color:var(--navy)}
+.keep .k1:hover{background:var(--sky-2)}
+.keep .k2{background:var(--navy);color:#fff}
+.keep .k2:hover{background:var(--accent)}
+.keep .ico{width:16px;height:16px}
+
+/* ── Hero ── */
+.hero{background:linear-gradient(180deg,var(--sky) 0%,#fff 100%);padding:72px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{margin:24px 0 36px;max-width:560px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.ticks{display:flex;gap:22px;margin-top:28px;flex-wrap:wrap;font-size:var(--fs-1);color:var(--ink-2)}
+.ticks span{display:flex;align-items:center;gap:8px}
+.ticks .ico{width:18px;height:18px;color:var(--ok);stroke-width:2.2}
+.hero-visual{position:relative}
+.hero-visual .photo{border-radius:var(--r-l);overflow:hidden;aspect-ratio:1/1.02;box-shadow:var(--shadow)}
+.hero-visual .photo img{width:100%;height:100%;object-fit:cover;object-position:55% center}
+.glass{position:absolute;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);box-shadow:var(--shadow)}
+.g-calc{left:-56px;bottom:40px;padding:22px 24px;width:320px}
+.g-calc p{font-size:var(--fs-1);color:var(--ink-2)}
+.g-calc strong{display:block;font-family:var(--head);font-size:40px;color:var(--navy);line-height:1.1;margin:4px 0 10px;letter-spacing:-.02em}
+.g-calc .spark{display:flex;align-items:flex-end;gap:4px;height:40px;margin-bottom:12px}
+.g-calc .spark i{flex:1;background:var(--sky-2);border-radius:3px 3px 0 0}
+.g-calc .spark i:last-child{background:var(--accent)}
+.g-rate{right:-20px;top:36px;padding:14px 18px;display:flex;align-items:center;gap:12px}
+.g-rate .badge{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}
+.g-rate b{font-family:var(--head);font-size:var(--fs-3);color:var(--navy);display:block;line-height:1.1}
+.g-rate span{font-size:var(--fs-1);color:var(--ink-3)}
+
+/* ── Trust ── */
+.trust{border-block:1px solid var(--line);background:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:30px 24px;text-align:center}
+.trust div+div{border-left:1px solid var(--line)}
+.trust b{display:block;font-family:var(--head);font-size:var(--fs-4);color:var(--navy);letter-spacing:-.02em}
+.trust span{font-size:var(--fs-1);color:var(--ink-3)}
+
+section.block{padding:112px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:48px}
+.head p{max-width:440px;color:var(--ink-2)}
+
+/* ── Momento vital ── */
+.tabs{display:flex;gap:8px;background:var(--sky);padding:6px;border-radius:999px;width:max-content;margin-bottom:32px}
+.tabs button{border:0;background:transparent;height:52px;padding:0 24px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--ink-2);display:flex;flex-direction:column;justify-content:center;line-height:1.2;text-align:left;transition:background .2s,color .2s}
+.tabs button small{font-weight:500;font-size:12.5px;color:var(--ink-3)}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--navy);box-shadow:0 6px 18px -8px rgba(0,58,99,.35)}
+.tabs button[aria-selected="true"] small{color:var(--accent)}
+.panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+[hidden]{display:none!important}
+.panel .story{position:relative;border-radius:var(--r-l);overflow:hidden;min-height:440px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:40px}
+.panel .story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel .story::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,58,99,0) 30%,rgba(0,40,70,.92) 100%);z-index:1}
+.panel .story>*{position:relative;z-index:2}
+.panel .story h3{color:#fff;margin-bottom:10px}
+.panel .story p{color:#DCE9F4;max-width:420px}
+.prods{display:grid;gap:14px;align-content:start}
+.prod{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:18px;padding:22px 24px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:border-color .2s,box-shadow .2s,transform .2s}
+.prod:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-2px)}
+.prod .ic{width:52px;height:52px;border-radius:14px;background:var(--sky);color:var(--accent);display:grid;place-items:center}
+.prod .kind{font-size:12.5px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.prod h4{font-size:var(--fs-3);margin:2px 0}
+.prod p{font-size:var(--fs-1);color:var(--ink-3)}
+.prod .go{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--navy);transition:background .2s,color .2s}
+.prod:hover .go{background:var(--accent);color:#fff;border-color:var(--accent)}
+.prods .more{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-radius:var(--r);background:var(--sky);font-size:var(--fs-1);color:var(--ink-2)}
+
+/* ── Categorías bento ── */
+.cats{background:var(--sky)}
+.bento{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:20px}
+.cat{background:#fff;border-radius:var(--r-l);padding:36px;display:flex;flex-direction:column;gap:14px;border:1px solid transparent;transition:border-color .2s,transform .2s,box-shadow .2s}
+.cat:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
+.cat .ic{width:56px;height:56px;border-radius:16px;background:var(--sky);color:var(--accent);display:grid;place-items:center}
+.cat .ic .ico{width:26px;height:26px}
+.cat ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.cat li{font-size:13.5px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--sky);color:var(--navy)}
+.cat.big{grid-row:span 2;background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.cat.big h3,.cat.big h2{color:#fff}
+.cat.big p{color:#C9DCEC}
+.cat.big .ic{background:rgba(255,255,255,.12);color:#fff}
+.cat.big li{background:rgba(255,255,255,.12);color:#fff}
+.cat.big .rate{font-family:var(--head);font-size:clamp(64px,7vw,104px);font-weight:800;line-height:1;letter-spacing:-.04em;margin-top:18px}
+.cat.big .rate small{font-size:var(--fs-2);font-weight:600;letter-spacing:0;color:#C9DCEC;display:block;margin-top:8px}
+.cat.big::after{content:"";position:absolute;right:-140px;bottom:-160px;width:360px;height:360px;border-radius:50%;border:56px solid rgba(15,121,187,.28);pointer-events:none}
+.cat.big>*{position:relative;z-index:1}
+.cat.big .link{color:#fff}
+.cat.wide{grid-column:span 2;flex-direction:row;align-items:center;gap:28px}
+.cat.wide>div{flex:1}
+
+/* ── Recomendador ── */
+.reco{background:var(--navy);color:#fff;border-radius:var(--r-l);padding:64px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;overflow:hidden}
+.reco::before{content:"";position:absolute;left:-160px;bottom:-200px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(15,121,187,.55),transparent 70%)}
+.reco>*{position:relative}
+.reco h2{color:#fff}
+.reco .eyebrow{color:#8FC3E6}
+.reco .lead{color:#C9DCEC;margin:18px 0 0}
+.quiz{background:#fff;color:var(--ink);border-radius:var(--r);padding:32px;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
+.quiz .bar{height:6px;background:var(--sky-2);border-radius:3px;margin:10px 0 22px;overflow:hidden}
+.quiz .bar i{display:block;height:100%;background:var(--accent);border-radius:3px;transition:width .35s}
+.quiz h4{margin-bottom:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;padding:15px 18px;border:1.5px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;text-align:left;font-weight:600;color:var(--navy);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--accent);background:var(--sky)}
+.opt .dot{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none}
+.opt:hover .dot{border-color:var(--accent)}
+.quiz .back{background:none;border:0;color:var(--ink-3);font-size:var(--fs-1);margin-top:14px;cursor:pointer}
+.result .pick{display:flex;gap:14px;align-items:center;padding:16px;border-radius:14px;background:var(--sky);margin-bottom:10px}
+.result .pick .ic{width:44px;height:44px;border-radius:12px;background:#fff;color:var(--accent);display:grid;place-items:center}
+
+/* ── Calculadora ── */
+.calc{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden}
+.calc .in{padding:56px}
+.calc .out{padding:56px;background:var(--sky);display:flex;flex-direction:column}
+.fld{margin-top:36px}
+.fld .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.fld label{font-weight:600;color:var(--ink-2)}
+.fld output{font-family:var(--head);font-size:var(--fs-4);font-weight:700;color:var(--navy)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:4px;background:linear-gradient(90deg,var(--accent) var(--p,50%),var(--sky-2) var(--p,50%));cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:2px solid var(--accent);box-shadow:0 4px 12px rgba(0,58,99,.25)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid var(--accent)}
+.rng{display:flex;justify-content:space-between;font-size:13.5px;color:var(--ink-3);margin-top:8px}
+.rate-pill{display:inline-flex;align-items:center;gap:10px;margin-top:36px;padding:12px 18px;border-radius:999px;background:var(--sky);font-size:var(--fs-1);color:var(--ink-2)}
+.rate-pill b{color:var(--accent);font-size:var(--fs-2)}
+.out .total{font-family:var(--head);font-size:clamp(48px,5vw,76px);font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1;margin:8px 0 28px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.split div{background:#fff;border-radius:14px;padding:16px 18px}
+.split span{font-size:var(--fs-1);color:var(--ink-3);display:flex;align-items:center;gap:8px}
+.split span::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--navy)}
+.split div:last-child span::before{background:var(--accent)}
+.split b{font-family:var(--head);font-size:var(--fs-3);color:var(--navy)}
+.meter{height:12px;border-radius:6px;background:var(--navy);overflow:hidden;display:flex;justify-content:flex-end}
+.meter i{display:block;height:100%;background:var(--accent);transition:width .3s}
+.out .note{font-size:13.5px;color:var(--ink-3);margin:18px 0 28px}
+.out .btn{margin-top:auto;align-self:flex-start}
+
+/* ── Pensumo ── */
+.pensumo{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;background:linear-gradient(110deg,var(--sky) 0%,#fff 100%);border:1px solid var(--line);border-radius:var(--r-l);padding:40px 48px}
+.phone{width:120px;height:170px;border-radius:26px;background:var(--navy);padding:10px;box-shadow:var(--shadow);transform:rotate(-6deg)}
+.phone div{height:100%;border-radius:18px;background:#fff;padding:14px 10px;display:flex;flex-direction:column;gap:7px;font-size:11px;color:var(--ink-2)}
+.phone b{font-family:var(--head);color:var(--navy);font-size:18px}
+.phone i{display:block;height:7px;border-radius:4px;background:var(--sky-2)}
+.phone i.a{background:var(--accent);width:70%}
+.gift{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--accent);background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:999px;margin-bottom:12px}
+.gift .ico{width:16px;height:16px}
+.eg{display:grid;gap:10px;font-size:var(--fs-1)}
+.eg div{display:flex;justify-content:space-between;gap:24px;padding:12px 16px;background:#fff;border-radius:12px;border:1px solid var(--line)}
+.eg b{color:var(--accent)}
+
+/* ── Aprende ── */
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.guide{display:flex;flex-direction:column;gap:14px}
+.guide .cover{aspect-ratio:16/10;border-radius:var(--r);background:var(--sky);display:grid;place-items:center;color:var(--accent);position:relative;overflow:hidden;transition:transform .3s}
+.guide:hover .cover{transform:scale(.98)}
+.guide .cover .ico{width:56px;height:56px;stroke-width:1.3}
+.guide .cover::after{content:"";position:absolute;right:-40px;bottom:-40px;width:160px;height:160px;border-radius:50%;background:rgba(15,121,187,.1)}
+.guide:nth-child(2) .cover{background:var(--navy);color:#fff}
+.guide:nth-child(2) .cover::after{background:rgba(255,255,255,.08)}
+.guide .meta{font-size:13.5px;font-weight:600;color:var(--accent)}
+.guide h4{font-size:var(--fs-3)}
+
+/* ── Por qué + testimonios ── */
+.why{background:var(--sky)}
+.why .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.why ul{list-style:none;display:grid;gap:18px;margin-top:32px}
+.why li{display:flex;gap:16px;align-items:flex-start}
+.why li .ic{width:40px;height:40px;border-radius:12px;background:#fff;color:var(--accent);display:grid;place-items:center;flex:none}
+.why li b{display:block;color:var(--navy);font-family:var(--head)}
+.why li span{font-size:var(--fs-1);color:var(--ink-2)}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.quote{background:#fff;border-radius:var(--r);padding:32px;display:flex;flex-direction:column;gap:20px;box-shadow:0 10px 30px -18px rgba(0,58,99,.3)}
+.quote:nth-child(2){transform:translateY(40px)}
+.quote p{font-size:var(--fs-3);font-family:var(--head);font-weight:600;color:var(--navy);line-height:1.4;letter-spacing:-.01em}
+.quote .who{display:flex;gap:12px;align-items:center;margin-top:auto}
+.quote .av{width:48px;height:48px;border-radius:50%;background-size:cover;background-position:center}
+.quote .who b{display:block;font-size:var(--fs-2)}
+.quote .who span{font-size:var(--fs-1);color:var(--ink-3)}
+
+/* ── Formulario ── */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+.steps{display:grid;gap:18px;margin:32px 0}
+.steps div{display:flex;gap:16px;align-items:center}
+.steps b{width:40px;height:40px;border-radius:50%;background:var(--sky);color:var(--accent);display:grid;place-items:center;font-family:var(--head);flex:none}
+.call{display:flex;align-items:center;gap:14px;padding:18px 22px;border-radius:var(--r);border:1px solid var(--line);width:max-content}
+.call .ic{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}
+.call b{font-family:var(--head);font-size:var(--fs-3);color:var(--navy);display:block;line-height:1.1}
+form.card{background:#fff;border-radius:var(--r-l);padding:44px;box-shadow:0 30px 70px -30px rgba(0,58,99,.35);border:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:flex;flex-direction:column;gap:8px}
+.f label{font-size:var(--fs-1);font-weight:600;color:var(--ink-2)}
+.f input,.f select{height:54px;border:1.5px solid var(--line);border-radius:14px;padding:0 16px;background:#fff;font-size:var(--fs-2);transition:border-color .2s}
+.f input:focus,.f select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(15,121,187,.12)}
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-1);color:var(--ink-2);margin-top:14px}
+.chk input{width:20px;height:20px;accent-color:var(--accent);margin-top:2px;flex:none}
+.chk a{color:var(--accent);text-decoration:underline}
+form .btn{width:100%;margin-top:24px}
+.thanks{text-align:center;padding:40px 10px}
+.thanks .ic{width:72px;height:72px;border-radius:50%;background:#E6F4EE;color:var(--ok);display:grid;place-items:center;margin:0 auto 18px}
+
+/* ── Footer ── */
+footer{background:var(--navy);color:#B8CFE2;padding:80px 0 32px;font-size:var(--fs-1)}
+footer .cols{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:40px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer img{height:52px;width:auto;margin-bottom:18px}
+footer h5{font-family:var(--head);font-size:var(--fs-2);color:#fff;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a:hover{color:#fff}
+footer .legal{display:flex;justify-content:space-between;padding-top:28px;flex-wrap:wrap;gap:12px}
+
+/* ── Flotante ── */
+.fab{position:fixed;right:28px;bottom:28px;z-index:50;display:flex;gap:10px}
+.fab a{display:flex;align-items:center;gap:10px;height:56px;padding:0 22px;border-radius:999px;font-weight:600;box-shadow:0 14px 30px -10px rgba(0,58,99,.5)}
+.fab .f1{background:var(--accent);color:#fff}
+.fab .f2{background:#fff;color:var(--navy);width:56px;padding:0;justify-content:center}
+
+/* Responsive básico */
+@media (max-width:1100px){
+  .menu{display:none}
+  .hero .wrap,.panel,.reco,.calc,.why .wrap,.contact .wrap{grid-template-columns:1fr}
+  .bento{grid-template-columns:1fr 1fr}.cat.big{grid-row:auto;grid-column:span 2}
+  .guides{grid-template-columns:1fr}
+  .g-calc{left:16px}
+  .tabs{width:100%;overflow-x:auto}
+  .pensumo{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .keep .k1,.topbar nav,.brand span{display:none}
+  .trust .wrap,.quotes,.grid2,.split{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}.quote:nth-child(2){transform:none}
+  .bento{grid-template-columns:1fr}.cat.big,.cat.wide{grid-column:auto}.cat.wide{flex-direction:column;align-items:flex-start}
+  .calc .in,.calc .out,.reco,form.card{padding:28px}
+  .head{flex-direction:column;align-items:flex-start}
+  section.block{padding:72px 0}
+  .g-rate{right:8px}
+  .fab .f1 span{display:none}.fab .f1{width:56px;padding:0;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- Iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></symbol>
+  <symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <nav aria-label="Enlaces corporativos"><a href="#">Fundación Mutual Médica</a><a href="#">Web Mutual Médica</a><a href="#">Actualidad</a><a href="#">Conócenos</a></nav>
+    <a class="tel" href="tel:900828899"><svg class="ico"><use href="#i-phone"/></svg>900 82 88 99 · Gratuito</a>
+  </div>
+</div>
+
+<header class="main">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Futuro del Médico, de Mutual Médica">
+      <img src="../assets/logo-mutual-medica.png" alt="Mutual Médica">
+      <span>Futuro del Médico</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+      <a href="#productos">Productos</a>
+      <a href="#momento">Tu momento</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#aprende">Aprende</a>
+      <a href="#contacto">¿Te ayudamos?</a>
+    </nav>
+    <div class="keep">
+      <a class="k1" href="#"><svg class="ico"><use href="#i-file"/></svg>Gestión de prestaciones</a>
+      <a class="k2" href="#"><svg class="ico"><use href="#i-lock"/></svg>Área mutualista</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Médicos cuidando de médicos</p>
+        <h1>Cuidas de todos.<br>Ahora, <em>cuida de tu futuro.</em></h1>
+        <p class="lead">Ahorro, inversión, protección y financiación pensados para cada etapa de tu carrera. Sin letra pequeña y con un asesor que te lo explica.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#recomendador">Descubre tu plan en 1 minuto <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#contacto">Quiero que me llaméis</a>
+        </div>
+        <div class="ticks">
+          <span><svg class="ico"><use href="#i-check"/></svg>Sin compromiso</span>
+          <span><svg class="ico"><use href="#i-check"/></svg>Asesores expertos en médicos</span>
+          <span><svg class="ico"><use href="#i-check"/></svg>Beneficios para ti</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo"><img src="../assets/foto-jovenes.jpg" alt="Tres médicos jóvenes conversando en el pasillo del hospital"></div>
+        <div class="glass g-rate"><span class="badge"><svg class="ico"><use href="#i-percent"/></svg></span><div><b>2,20&nbsp;%</b><span>interés garantizado</span></div></div>
+        <a class="glass g-calc" href="#simulador">
+          <p>Ahorrando 150&nbsp;€ al mes durante 20 años</p>
+          <strong>45.147&nbsp;€</strong>
+          <div class="spark" aria-hidden="true"><i style="height:20%"></i><i style="height:32%"></i><i style="height:44%"></i><i style="height:57%"></i><i style="height:71%"></i><i style="height:85%"></i><i style="height:100%"></i></div>
+          <span class="link small">Calcula el tuyo <svg class="ico"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <div><b>+100 años</b><span>al lado del colectivo médico</span></div>
+      <div><b>+100.500</b><span>médicos mutualistas</span></div>
+      <div><b>0 accionistas</b><span>los beneficios se reinvierten en ti</span></div>
+      <div><b>900 82 88 99</b><span>atención gratuita de L a V</span></div>
+    </div>
+  </div>
+
+  <!-- MOMENTO VITAL -->
+  <section class="block" id="momento">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Tu momento</p><h2>¿En qué punto de tu carrera estás?</h2></div>
+        <p>Elige tu etapa y te mostramos solo lo que tiene sentido para ti ahora.</p>
+      </div>
+      <div data-tabs>
+        <div class="tabs" role="tablist" aria-label="Etapas">
+          <button role="tab" aria-selected="true" aria-controls="p1" id="b1"><small>MIR y primeros años</small>Empiezo mi carrera</button>
+          <button role="tab" aria-selected="false" aria-controls="p2" id="b2"><small>30 – 45 años</small>Construyo mi vida</button>
+          <button role="tab" aria-selected="false" aria-controls="p3" id="b3"><small>45 – 55 años</small>Hago crecer mi patrimonio</button>
+          <button role="tab" aria-selected="false" aria-controls="p4" id="b4"><small>+55 años</small>Preparo mi jubilación</button>
+        </div>
+
+        <div class="panel" id="p1" role="tabpanel" aria-labelledby="b1">
+          <div class="story"><img src="../assets/foto-guardia.jpg" alt="Dos residentes charlando en la sala de descanso del hospital"><h3>Tu carrera arranca. Tu futuro, también.</h3><p>Financia tu formación y empieza a ahorrar con poco. Cuanto antes empieces, menos esfuerzo te costará.</p></div>
+          <div class="prods">
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-wallet"/></svg></span><div><span class="kind">Financiación</span><h4>Préstamo MIR</h4><p>Para tu residencia, traslado o preparación.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span><div><span class="kind">Ahorro</span><h4>Seguro de Ahorro Garantizado</h4><p>Empieza con lo que puedas, al 2,20&nbsp;% garantizado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Plan INbestMe</h4><p>Inversión automatizada y sostenible, 100&nbsp;% online.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <div class="panel" id="p2" role="tabpanel" aria-labelledby="b2" hidden>
+          <div class="story"><img src="../assets/foto-familia.jpg" alt="Pareja paseando con niños jugando al fondo"><h3>Casa, familia, proyectos.</h3><p>Protege a los tuyos y haz realidad tus planes, sin renunciar a ahorrar para mañana.</p></div>
+          <div class="prods">
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-wallet"/></svg></span><div><span class="kind">Financiación</span><h4>Préstamo Ilusiona</h4><p>Para tus proyectos personales.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-heart"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Orfandad</h4><p>El futuro y los estudios de tus hijos, asegurados.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><span class="kind">Protección</span><h4>Seguro Multi-Vida</h4><p>Tranquilidad para ti y tu familia.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <div class="panel" id="p3" role="tabpanel" aria-labelledby="b3" hidden>
+          <div class="story"><img src="../assets/foto-equipo.jpg" alt="Equipo sanitario caminando por el hospital"><h3>Que tu dinero trabaje para ti.</h3><p>Rentabiliza tus ahorros con el nivel de riesgo que elijas y piensa ya en tu protección.</p></div>
+          <div class="prods">
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Seguro de Ahorro-Inversión</h4><p>Aportación única con rentabilidad garantizada.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Plan INbestMe</h4><p>Carteras indexadas adaptadas a tu perfil.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Dependencia</h4><p>Por si un día necesitas ayuda.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+
+        <div class="panel" id="p4" role="tabpanel" aria-labelledby="b4" hidden>
+          <div class="story"><img src="../assets/foto-senior.jpg" alt="Médica revisando documentos en una tablet"><h3>Jubílate con el nivel de vida que quieres.</h3><p>Maximiza tus ahorros, elige cómo cobrarlos y protege tu autonomía y la de tu familia.</p></div>
+          <div class="prods">
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span><div><span class="kind">Ahorro</span><h4>Seguro de Ahorro Garantizado</h4><p>Cobra en capital o en renta mensual creciente.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span><div><span class="kind">Inversión</span><h4>Seguro de Ahorro-Inversión</h4><p>Sin riesgo de mercado, 1,70&nbsp;% garantizado.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <a class="prod" href="#"><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><span class="kind">Protección</span><h4>Seguro de Dependencia</h4><p>Tu autonomía, protegida.</p></div><span class="go"><svg class="ico" style="width:18px"><use href="#i-arrow"/></svg></span></a>
+            <div class="more"><span>Todo lo que necesitas en esta etapa</span><a class="link" href="#">Ver más <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section class="block cats" id="productos">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Productos</p><h2>¿Qué necesitas hoy?</h2></div>
+        <a class="link" href="#">Ver todos los productos <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="bento">
+        <a class="cat big" href="#">
+          <span class="ic"><svg class="ico"><use href="#i-coins"/></svg></span>
+          <h3>Ahorro</h3>
+          <p>Guarda para tus metas con un interés asegurado, sin riesgo y con total flexibilidad.</p>
+          <div class="rate">2,20&nbsp;%<small>interés bruto anual garantizado</small></div>
+          <ul><li>Ahorro Garantizado</li><li>Ahorro-Inversión</li><li>Plan INbestMe</li></ul>
+          <span class="link">Ver productos de ahorro <svg class="ico"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="cat" href="#">
+          <span class="ic"><svg class="ico"><use href="#i-trend"/></svg></span>
+          <h3>Inversión</h3>
+          <p class="muted">Haz crecer tu patrimonio con el riesgo que elijas.</p>
+          <ul><li>Ahorro-Inversión</li><li>Plan INbestMe</li></ul>
+        </a>
+        <a class="cat" href="#">
+          <span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span>
+          <h3>Protección</h3>
+          <p class="muted">Cuida de ti y de los que más quieres.</p>
+          <ul><li>Dependencia</li><li>Orfandad</li><li>Multi-Vida</li></ul>
+        </a>
+        <a class="cat wide" href="#">
+          <span class="ic"><svg class="ico"><use href="#i-wallet"/></svg></span>
+          <div><h3>Financiación</h3><p class="muted">Impulsa tu formación y tus proyectos con condiciones para médicos.</p></div>
+          <ul style="margin-top:0"><li>Préstamo MIR</li><li>Préstamo Ilusiona</li></ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMENDADOR -->
+  <section class="block" id="recomendador" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="reco">
+        <div>
+          <p class="eyebrow">Recomendador</p>
+          <h2>¿No sabes por dónde empezar? Te orientamos en 3 preguntas.</h2>
+          <p class="lead">Sin datos personales y en menos de un minuto. Al final verás qué te encaja y podrás pedir que te llamemos.</p>
+        </div>
+        <div class="quiz" id="quiz" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section class="block" id="simulador">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Simulador</p><h2>¿Cuánto tendrías si empiezas hoy?</h2></div>
+        <p>Mueve los valores y descubre el capital que puedes construir con el Seguro de Ahorro Garantizado.</p>
+      </div>
+      <div class="calc" data-calc>
+        <div class="in">
+          <h3>Tu plan de ahorro</h3>
+          <div class="fld">
+            <div class="top"><label for="m">Aportación mensual</label><output data-out="monthly"></output></div>
+            <input id="m" type="range" name="monthly" min="30" max="1000" step="10" value="150">
+            <div class="rng"><span>30&nbsp;€</span><span>1.000&nbsp;€</span></div>
+          </div>
+          <div class="fld">
+            <div class="top"><label for="y">Durante</label><output data-out="years"></output></div>
+            <input id="y" type="range" name="years" min="1" max="40" value="20">
+            <div class="rng"><span>1 año</span><span>40 años</span></div>
+          </div>
+          <div class="rate-pill"><svg class="ico" style="width:18px;color:var(--accent)"><use href="#i-percent"/></svg>Interés técnico garantizado <b>2,20&nbsp;%</b> bruto anual</div>
+        </div>
+        <div class="out">
+          <span class="muted">Capital final estimado</span>
+          <div class="total" data-out="total"></div>
+          <div class="split">
+            <div><span>Lo que aportas</span><b data-out="paid"></b></div>
+            <div><span>Intereses generados</span><b data-out="interest"></b></div>
+          </div>
+          <div class="meter" aria-hidden="true"><i data-out="bar"></i></div>
+          <p class="note">Cálculo orientativo con un interés técnico bruto anual garantizado del 2,20&nbsp;% para aportaciones periódicas. No incluye participación en beneficios ni fiscalidad.</p>
+          <a class="btn btn-primary" href="#contacto">Quiero empezar a ahorrar <svg class="ico"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENSUMO -->
+  <section style="padding-bottom:112px">
+    <div class="wrap">
+      <div class="pensumo">
+        <div class="phone" aria-hidden="true"><div><span>Este mes</span><b>+18,40&nbsp;€</b><i class="a"></i><i></i><i style="width:60%"></i><i></i><i style="width:80%"></i></div></div>
+        <div>
+          <span class="gift"><svg class="ico"><use href="#i-gift"/></svg>Regalo con tu ahorro</span>
+          <h3>Ahorra sin darte cuenta con Pensumo, gratis.</h3>
+          <p class="muted" style="margin-top:8px;max-width:560px">Al contratar cualquier producto de ahorro, te regalamos el acceso a la app que redondea tus compras diarias y guarda la diferencia en tu ahorro.</p>
+        </div>
+        <div class="eg">
+          <div><span>Café de 2,60&nbsp;€</span><span>→ 3&nbsp;€</span></div>
+          <div><span>Tu ahorro</span><b>+0,40&nbsp;€</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APRENDE -->
+  <section class="block" id="aprende" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Aprende</p><h2>Finanzas claras, en 3 minutos.</h2></div>
+        <div style="display:flex;gap:18px;align-items:center"><a class="btn btn-ghost btn-sm" href="#"><svg class="ico" style="width:16px"><use href="#i-search"/></svg>Glosario A–Z</a><a class="link" href="#">Ver todas las guías <svg class="ico"><use href="#i-arrow"/></svg></a></div>
+      </div>
+      <div class="guides">
+        <a class="guide" href="#"><div class="cover"><svg class="ico"><use href="#i-book"/></svg></div><span class="meta">Guía · 3 min</span><h4>Ahorro vs. inversión: ¿cuál es para mí?</h4></a>
+        <a class="guide" href="#"><div class="cover"><svg class="ico"><use href="#i-user"/></svg></div><span class="meta">Guía · 4 min</span><h4>Qué pensión tendré como médico y cómo complementarla</h4></a>
+        <a class="guide" href="#"><div class="cover"><svg class="ico"><use href="#i-play"/></svg></div><span class="meta">Vídeo · 2 min</span><h4>¿Qué es la participación en beneficios?</h4></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ -->
+  <section class="block why">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Por qué Mutual Médica</p>
+        <h2>Somos médicos cuidando de médicos.</h2>
+        <ul>
+          <li><span class="ic"><svg class="ico"><use href="#i-users"/></svg></span><div><b>Sin accionistas</b><span>Los beneficios se reinvierten en ti y en el colectivo médico.</span></div></li>
+          <li><span class="ic"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Más de 100 años de solvencia</b><span>La entidad de referencia para los médicos en España.</span></div></li>
+          <li><span class="ic"><svg class="ico"><use href="#i-help"/></svg></span><div><b>Asesores que te entienden</b><span>Conocen la carrera médica y te lo explican sin tecnicismos.</span></div></li>
+        </ul>
+      </div>
+      <div class="quotes">
+        <figure class="quote"><p>“Empecé a ahorrar en la residencia con 50&nbsp;€ al mes. Ahora ni lo noto y ya tengo mi colchón.”</p><figcaption class="who"><span class="av" style="background-image:url(../assets/foto-jovenes.jpg);background-position:47% 20%;background-size:300%"></span><div><b>Laura, 32 años</b><span>MIR de Pediatría</span></div></figcaption></figure>
+        <figure class="quote"><p>“Me lo explicaron todo sin tecnicismos. Por fin sé qué tengo y para qué.”</p><figcaption class="who"><span class="av" style="background-image:url(../assets/foto-senior.jpg);background-position:74% 18%;background-size:320%"></span><div><b>Carmen, 58 años</b><span>Médica de familia</span></div></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="block contact" id="contacto">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Te llamamos</p>
+        <h2>Habla con un asesor. Sin compromiso.</h2>
+        <p class="lead" style="margin-top:18px">Déjanos tu teléfono y te llamamos cuando mejor te vaya. Si te encaja, lo contratas por teléfono en unos minutos.</p>
+        <div class="steps">
+          <div><b>1</b><span>Nos dejas tus datos</span></div>
+          <div><b>2</b><span>Te llamamos en menos de 24 h</span></div>
+          <div><b>3</b><span>Contratas por teléfono, si te encaja</span></div>
+        </div>
+        <a class="call" href="tel:900828899"><span class="ic"><svg class="ico"><use href="#i-phone"/></svg></span><div><span class="small muted">¿Prefieres llamar tú?</span><b>900 82 88 99</b></div></a>
+      </div>
+      <form class="card" id="lead" novalidate>
+        <h3 style="margin-bottom:24px">Solicita información</h3>
+        <div class="grid2">
+          <div class="f"><label for="n">Nombre</label><input id="n" name="nombre" autocomplete="given-name" placeholder="Tu nombre" required></div>
+          <div class="f"><label for="t">Teléfono</label><input id="t" name="telefono" type="tel" autocomplete="tel" placeholder="600 000 000" required></div>
+          <div class="f"><label for="i">Me interesa</label>
+            <select id="i" name="interes">
+              <option value="">Aún no lo sé</option>
+              <optgroup label="Ahorro"><option>Seguro de Ahorro Garantizado</option><option>Seguro de Ahorro-Inversión</option><option>Plan INbestMe</option></optgroup>
+              <optgroup label="Protección"><option>Seguro de Dependencia</option><option>Seguro de Orfandad</option><option>Seguro Multi-Vida</option></optgroup>
+              <optgroup label="Financiación"><option>Préstamo MIR</option><option>Préstamo Ilusiona</option></optgroup>
+            </select></div>
+          <div class="f"><label for="h">¿Cuándo te llamamos?</label><select id="h" name="franja"><option>Mañana (9 – 14 h)</option><option>Tarde (15 – 20 h)</option></select></div>
+        </div>
+        <label class="chk"><input type="checkbox" required> <span>He leído y acepto la <a href="#">política de privacidad</a>.</span></label>
+        <label class="chk"><input type="checkbox"> <span>Quiero recibir novedades y ventajas para mutualistas.</span></label>
+        <button class="btn btn-primary" type="submit">Quiero que me llaméis <svg class="ico"><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><img src="../assets/logo-mutual-medica-blanco.png" alt="Mutual Médica"><p>La mutualidad de los médicos.<br>Médicos cuidando de médicos desde 1920.</p></div>
+      <div><h5>Productos</h5><ul><li><a href="#">Ahorro</a></li><li><a href="#">Inversión</a></li><li><a href="#">Protección</a></li><li><a href="#">Financiación</a></li></ul></div>
+      <div><h5>Tu momento</h5><ul><li><a href="#">Empiezo mi carrera</a></li><li><a href="#">Construyo mi vida</a></li><li><a href="#">Hago crecer mi patrimonio</a></li><li><a href="#">Preparo mi jubilación</a></li></ul></div>
+      <div><h5>Herramientas</h5><ul><li><a href="#">Simulador de ahorro</a></li><li><a href="#">Recomendador</a></li><li><a href="#">Glosario</a></li><li><a href="#">Guías</a></li></ul></div>
+      <div><h5>Mutualistas</h5><ul><li><a href="#">Gestión de prestaciones</a></li><li><a href="#">Área mutualista</a></li><li><a href="#">¿Te ayudamos?</a></li><li><a href="tel:900828899">900 82 88 99</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© Mutual Médica</span><span>Aviso legal · Política de privacidad · Cookies · Accesibilidad</span></div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="f2" href="#aprende" aria-label="Ayuda"><svg class="ico"><use href="#i-help"/></svg></a>
+  <a class="f1" href="#contacto"><svg class="ico"><use href="#i-phone"/></svg><span>Te llamamos</span></a>
+</div>
+
+<script src="../js/app.js"></script>
+<script>
+// Recomendador en 3 preguntas
+(function(){
+  const box = document.getElementById('quiz');
+  const Q = [
+    {t:'¿Cuál es tu prioridad ahora mismo?', k:'goal', o:[['save','Ahorrar para una meta concreta'],['grow','Hacer crecer lo que ya tengo'],['protect','Proteger a mi familia'],['fund','Financiar un proyecto o mi formación']]},
+    {t:'¿En qué etapa estás?', k:'stage', o:[['mir','MIR o primeros años'],['30','Entre 30 y 45 años'],['45','Entre 45 y 55 años'],['55','Más de 55 años']]},
+    {t:'¿Cómo te sientes con el riesgo?', k:'risk', o:[['low','Prefiero seguridad total'],['mid','Acepto algo de riesgo'],['high','Busco más rentabilidad']]}
+  ];
+  const P = {
+    AG:['i-coins','Seguro de Ahorro Garantizado','2,20 % garantizado, sin riesgo'],
+    AI:['i-trend','Seguro de Ahorro-Inversión','Aportación única garantizada'],
+    IB:['i-trend','Plan INbestMe','Carteras indexadas a tu perfil'],
+    DE:['i-shield','Seguro de Dependencia','Tu autonomía, protegida'],
+    OR:['i-heart','Seguro de Orfandad','El futuro de tus hijos'],
+    MV:['i-shield','Seguro Multi-Vida','Tranquilidad para tu familia'],
+    PM:['i-wallet','Préstamo MIR','Para tu residencia y formación'],
+    PI:['i-wallet','Préstamo Ilusiona','Para tus proyectos personales']
+  };
+  const a = {}; let step = 0;
+  function pick(){
+    const {goal,stage,risk} = a;
+    if (goal==='fund') return stage==='mir' ? ['PM','AG'] : ['PI','AG'];
+    if (goal==='protect') return stage==='mir' ? ['MV','AG'] : stage==='30' ? ['OR','MV'] : ['DE','MV'];
+    if (goal==='grow') return risk==='low' ? ['AI','AG'] : risk==='mid' ? ['AI','IB'] : ['IB','AI'];
+    return risk==='low' ? ['AG','AI'] : ['AG','IB'];
+  }
+  function render(){
+    if (step < Q.length){
+      const q = Q[step];
+      box.innerHTML = `<span class="small muted">Pregunta ${step+1} de ${Q.length}</span>
+        <div class="bar"><i style="width:${(step+1)/Q.length*100}%"></i></div>
+        <h4>${q.t}</h4>
+        <div class="opts">${q.o.map(([v,l])=>`<button class="opt" data-v="${v}"><span class="dot"></span>${l}</button>`).join('')}</div>
+        ${step?'<button class="back">← Volver</button>':''}`;
+      box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{a[q.k]=b.dataset.v; step++; render();});
+      const back = box.querySelector('.back'); if (back) back.onclick=()=>{step--; render();};
+    } else {
+      const r = pick();
+      box.innerHTML = `<div class="result"><span class="small muted">Tu recomendación</span>
+        <div class="bar"><i style="width:100%"></i></div>
+        <h4>Estos productos encajan contigo</h4>
+        ${r.map(k=>`<div class="pick"><span class="ic"><svg class="ico"><use href="#${P[k][0]}"/></svg></span><div><b style="color:var(--navy)">${P[k][1]}</b><br><span class="small muted">${P[k][2].replace(' %','&nbsp;%')}</span></div></div>`).join('')}
+        <a class="btn btn-primary" style="width:100%;margin-top:12px" href="#contacto" data-prod="${P[r[0]][1]}">Quiero que me llaméis</a>
+        <button class="back">↺ Empezar de nuevo</button></div>`;
+      box.querySelector('[data-prod]').onclick = e => { document.getElementById('i').value = e.currentTarget.dataset.prod; };
+      box.querySelector('.back').onclick=()=>{step=0; render();};
+    }
+  }
+  render();
+
+  // Formulario (demo)
+  const f = document.getElementById('lead');
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!f.checkValidity()) { f.reportValidity(); return; }
+    const n = f.nombre.value.trim();
+    f.innerHTML = `<div class="thanks"><span class="ic"><svg class="ico" style="width:32px;height:32px"><use href="#i-check"/></svg></span><h3>¡Gracias${n?', '+n.replace(/[<>&"]/g,''):''}!</h3><p class="muted" style="margin-top:10px">Un asesor te llamará en menos de 24 h en la franja que has elegido.</p></div>`;
+  });
+})();
+</script>
+</body>
+</html>
